@@ -1,0 +1,35 @@
+<html>
+<head><title>Livecounts sub count editor</title></head>
+<link rel=stylesheet href=style.css>
+<link rel=stylesheet href="https://github.hubspot.com/odometer/themes/odometer-theme-minimal.css">
+<body style="background-color: rgb(208, 228, 254);">
+<input id="subscribeButton" type="submit" value="Subscribe!" style="opacity: 1.007; display: block;">
+<a id="channelName" style="color: rgb(0, 0, 0); border: 3px none green;">Channel name</a>
+<div class="odometer odometer-auto-theme" id="channelSubs" style="color: rgb(0, 0, 0);">0</div>
+<div align="left" style="margin-top: 40% font-size: 36px">
+<input type="text" id="channelSubmitName" name="channelSubmitName" placeholder="Channel Name"><br>
+<input type="number" id="countSubmit" name="countSubmit" placeholder="Channel subs"><br>
+<input type="submit" value="Set Values" ONCLICK="submit()">
+<div align="left" style="font-family: Arial">
+<text>This site is not affiliated with </text><a href="https://livecounts.net" style="color: #08f">livecounts.net</a>
+</div>
+</div>
+<script type="text/javascript">
+function submit() {
+ const channelName = document.getElementById('channelSubmitName').value
+ const count = document.getElementById('countSubmit').value
+ if (channelName === '') {
+  alert("You must specify a channel name.");
+ } else {
+  if (count > 1000000000000 || count < 0) {
+   alert("Count must be between 0 and 1000000000000.");
+  } else {
+   document.getElementById('channelName').innerHTML = channelName
+   document.getElementById('channelSubs').innerHTML = Math.round(count)
+  }
+ }
+}
+</script>
+<script src="https://github.hubspot.com/odometer/odometer.js"></script>
+</body>
+</html>
