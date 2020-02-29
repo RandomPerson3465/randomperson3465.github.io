@@ -1,14 +1,20 @@
+const channel = channelSubmitName.value
+let count = 0
+let rate = 0
 function submit() {
- const channelName = document.getElementById('channelSubmitName').value
- const count = document.getElementById('countSubmit').value
- if (!channelName) {
-  alert("You must specify a channel name.");
- } else {
-  if (count > 1000000000000 || count < 0) {
-   alert("Count must be between 0 and 1000000000000.");
-  } else {
-   document.getElementById('channelName').innerHTML = channelName
-   document.getElementById('channelSubs').innerHTML = Math.round(count)
-  }
+    const channel = channelSubmitName.value
+    count = parseInt(countSubmit.value, 10)
+    if (!channel) { return alert("Invalid channel name.") }
+    if (typeof count === "undefined") { return alert("Count must be a number.") }
+    if (count < -1e12 || count > 1e12) { return alert("Count must be between -1 000 000 000 000 and 1 000 000 000 000.") }
+    channelSubs.innerHTML = count
+    channelName.innerHTML = channel
+    if (parseInt(subsPerMinute.value, 10)) rate = parseInt(subsPerMinute.value, 10)
+    if (rate > 1e9 || rate < -1e9 ) { return alert("Rate must be between -1 000 000 000 and 1 000 000 000.") }
  }
-}
+ function updateSubs() {
+     if (rate > 1e9 || rate < -1e9 ) return;
+     channelSubs.innerHTML = Math.floor(count + rate/80)
+     count = count + rate/80
+ }
+ setInterval(updateSubs, 750)
