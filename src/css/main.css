@@ -1,4 +1,11 @@
 body {
-    background-color: "#aaa";
-    color: "#444"
+    background-color: #aaa;
+    color: #444;
+    font-family: Arial
 }
+
+div {
+    font-size: 36
+}
+
+
