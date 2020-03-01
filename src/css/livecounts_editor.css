@@ -17,17 +17,9 @@ h5 {
     vertical-align: middle;
     position: relative
 }
-#byline,
 #channelName,
 #channelSubs,
-#channelThumbnail,
-#congratsText,
-#container,
-#description,
-#happyMarquee,
-#messageText,
 #subscribeButton,
-#updateText,
 .odometer.odometer-auto-theme .odometer-digit .odometer-value.odometer-last-value,
 .odometer.odometer-theme-default .odometer-digit .odometer-value.odometer-last-value,
 canvas {
@@ -70,13 +62,6 @@ body {
 .odometer.odometer-theme-default .odometer-digit .odometer-value {
     display: block;
     -webkit-transform: translateZ(0)
-}
-#congratsText,
-#description,
-#happyMarquee,
-#messageText,
-#shareLink {
-    display: none
 }
 .odometer.odometer-auto-theme.odometer-animating-up .odometer-ribbon-inner,
 .odometer.odometer-theme-default.odometer-animating-up .odometer-ribbon-inner {
@@ -133,18 +118,6 @@ body {
 #channelSubs {
     transition: color 2s ease
 }
-#channelSubs2,
-#title {
-    font-size: 4.5vw
-}
-#congratsText,
-#title {
-    padding-top: 8px
-}
-#byline {
-    top: 9.5%;
-    font-size: 2.5vw
-}
 #channelName {
     font-size: 3vw;
     top: 34.5%
@@ -162,36 +135,7 @@ a {
     top: 37%;
     z-index: -1
 }
-#container {
-    top: 66.5%;
-    width: 40%
-}
-#smallText {
-    font-size: 2.5vw
-}
-#congratsText {
-    width: 100%;
-    font-size: 7vw;
-    color: #fff
-}
-#messageText {
-    top: -28px;
-    font-size: 3vw;
-    color: #fff;
-    text-align: left;
-    width: 94%
-}
-#happyMarquee {
-    top: 22%;
-    font-size: 3.5vw
-}
-#channelThumbnail {
-    opacity: 0;
-    width: 10%;
-    bottom: 73%;
-    border-radius: 17.5%;
-    border: 1px solid #08f
-}
+
 #subscribeButton {
     -webkit-appearance: none;
     background-color: #0af;
@@ -207,251 +151,16 @@ a {
 #subscribeButton:active {
     background-color: #08f
 }
-#description {
-    top: 65%;
-    font-size: 3vw;
-    width: 90%;
-    color: #00f
-}
-#updateText {
-    bottom: 7%;
-    font-size: 3vw
-}
-#footerBar {
-    position: absolute;
-    bottom: 0px;
-    height: 40px;
-    width: 100%;
-    background: #246;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-align: center;
-    -moz-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-}
-.footerLink {
-    color: #fff;
-    margin: 0px 50px 0px 0px;
-}
-/*.optionLabel {
-    color: #d0e4fe;
-    margin: 0px 0px 0px 10px;
-}*/
-#messageBox {
-    position: absolute;
-    width: 25vw;
-    height: 15vw;
-    top: 43%;
-    transform: translateY(-50%);
-    background-color: #000;
-    opacity: .8;
-    border-radius: 1vw;
-    display: none;
-}
-#message {
-    display: table-cell;
-    vertical-align: middle;
-    font-size: 3vw;
-    color: #fff;
-}
-#nothing {
-    visibility: hidden;
-}
+
 canvas {
     width: 100%;
     height: 100%;
     display: block
 }
-#messageLink {
-    color: #00f
-}
 iframe {
     margin: 0px 5px;
 }
-#shareButton {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-align: center;
-    -moz-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    //margin: 0px 50px 0px 0px;
-}
-#searchBox {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    -webkit-box-align: center;
-    -moz-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-}
-#searchContent {
-    background-color: #fff;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-    height: 50%;
-    overflow: auto;
-    text-align: left;
-}
-#searchText {
-    width: 100%;
-    font-size: 20px;
-}
-#searchResults {
-    list-style: none;
-    padding: 0px;
-}
-.searchResult {
-    border-top: 1px solid #999;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-align: center;
-    -moz-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-    padding: 10px 0px;
-    font-size: 20px;
-    font-weight: bold;
-}
-.searchThumbnail {
-    border-radius: 17.5%;
-    margin-right: 20px;
-}
-#searchButton {
-    -webkit-appearance: none;
-    background-color: #0af;
-    border: none;
-    border-radius: 2px;
-    color: #fff;
-    padding: 6px;
-    width: 100px;
-    font-size: 15px;
-    margin-left: 10px;
-}
-#searchBar {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-}
-#menuIcon {
-    position: absolute;
-    right: 10px;
-    top: 0px;
-    bottom: 0px;
-    margin: auto;
-}
-#menuContent {
-    display: none;
-    position: absolute;
-    left: auto;
-    right: 0px;
-    bottom: 40px;
-    width: 200px;
-}
-.menuItem {
-    background-color: #fff;
-    height: 40px;
-    padding: 0px 10px;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-align: center;
-    -moz-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-    border-top: 1px solid #999;
-    border-left: 1px solid #999;
-    border-right: 1px solid #999;
-    position: relative;
-}
-.menuItemText {
-    text-align: left;
-    position: absolute;
-    left: 40px;
-    margin: 0px;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-align: center;
-    -moz-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-    top: 0px;
-    bottom: 0px;
-}
-.menuDivider {
-    margin: 0;
-    border: 1px solid;
-    color: #999;
-}
-.colorInput {
-    /*width: 20px;
-    height: 20px;
-    margin-right: 8px;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    padding: 0;
-    border: 1px solid #999;*/
-    display: none;
-}
-.colorInput::-moz-focus-inner {
-    padding: 0;
-}
-.colorInput::-webkit-color-swatch-wrapper {
-    padding: 0;
-}
-.colorInput::-moz-color-swatch {
-    border: none;
-}
-.colorInput::-webkit-color-swatch {
-    border: none;
-}
+
 .overlay {
     background-color: white;
     filter: alpha(opacity=50); /* IE */
@@ -471,28 +180,8 @@ input[type="checkbox"] {
     width: 22px;
     height: 22px;
 }
-input[type="radio"] {
-    margin: 0px 0px 0px 0px;
-    width: 22px;
-    height: 22px;
-}
-.colorBox {
-    width: 20px;
-    height: 20px;
-    border: 1px solid #999;
-    margin: 0px 8px 0px 0px;
-    background-color: #d0e4fe;
-}
+
 @media only screen and (min-aspect-ratio: 6/5) {
-    #byline {
-        top: 12.5%
-    }
-    #happyMarquee {
-        top: 20.5%
-    }
-    #channelThumbnail {
-        display: none
-    }
     #subscribeButton {
         top: 19.5%
     }
@@ -504,37 +193,15 @@ input[type="radio"] {
     }
 }
 @media only screen and (min-aspect-ratio: 5/3) {
-    #channelSubs2,
-    #smallText,
-    #updateText,
     h1,
     h5 {
         display: none
-    }
-    #happyMarquee {
-        top: 13%
     }
     #subscribeButton {
         top: 13.5%
     }
     #channelName {
         top: 26%
-    }
-    #description {
-        top: 68%
-    }
-}
-@media only screen and (max-width: 720px) {
-    .footerLink {
-        display: none;
-    }
-    /*#shareButton {
-        margin: 0px 20px 0px 0px;
-    }*/
-}
-@media only screen and (max-height: 800px) {
-    #updateText {
-        bottom: 9%;
     }
 }
 
