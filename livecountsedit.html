@@ -1,16 +1,17 @@
 <html>
-<head><title>Livecounts hacker</title></head>
+<head><title>Fake live sub count</title></head>
 <link rel=stylesheet href="/src/css/livecounts_editor.css">
 <link rel=stylesheet href="https://github.hubspot.com/odometer/themes/odometer-theme-minimal.css">
-<body style="background-color: rgb(208, 228, 254);">
+<body id="body" style="background-color: rgb(208, 228, 254);">
 <input id="subscribeButton" type="submit" value="Subscribe!" style="opacity: 1.007; display: block;">
 <a id="channelName" style="color: rgb(0, 0, 0); border: 3px none green;">Channel name</a>
 <div class="odometer odometer-auto-theme" id="channelSubs" style="color: rgb(0, 0, 0);">0</div>
-<div align="left" style="margin-top: 40% font-size: 36px">
+<div align="left" id="options" style="margin-top: 40% font-size: 36px">
 <input type="text" id="channelSubmitName" name="channelSubmitName" placeholder="Channel Name"><br>
 <input type="number" id="countSubmit" name="countSubmit" placeholder="Channel subs"><br>
 <input type="number" id="subsPerMinute" name="subsPerMinute" placeholder="Sub gain rate (optional)"><br>
-<input type="submit" value="Set Values" ONCLICK="submit(); updateSubs()"><br>
+<input type="number" id="subsAudit" name="subsAudit" placeholder="Press A to audit this many subs"><br>
+<input id="submitButton" type="submit" value="Set Values" ONCLICK="submit(); updateSubs()"><br>
 <input type="checkbox" id="nonNegOnly" name="nonNegOnly" value="nonNegOnly" ONCLICK="stopAtZero()">
 <label id="nonNegLabel" for="nonNegOnly">Non-negative counts only</label><br>
 <input type="checkbox" id="night" name="night" value="night" ONCLICK="toggleNightMode()">
@@ -20,9 +21,10 @@
     <option value="mins">Rate in subs/minute</option>
     <option value="hrs">Rate in subs/hour</option>
 </select>
-<div align="left" style="font-family: Arial">
-<text id="info">This site is not affiliated with </text><a href="https://livecounts.net" style="color: #08f">livecounts.net</a>
 </div>
+<div align="left" style="font-family: Arial">
+<text id="info">This site is not affiliated with </text><a href="https://livecounts.net" style="color: #08f">livecounts.net</a><br>
+<text id="log" style="font-family: Monospace; font-size: 14">Press P to pause, H to hide settings, R to reset subs</text><br>
 </div>
 <script src="/src/js/livecounts-editor.js"></script>
 <script src="https://github.hubspot.com/odometer/odometer.js"></script>
