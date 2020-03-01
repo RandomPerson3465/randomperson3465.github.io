@@ -9,8 +9,15 @@
 <div align="left" style="margin-top: 40% font-size: 36px">
 <input type="text" id="channelSubmitName" name="channelSubmitName" placeholder="Channel Name"><br>
 <input type="number" id="countSubmit" name="countSubmit" placeholder="Channel subs"><br>
-<input type="number" id="subsPerMinute" name="subsPerMinute" placeholder="Subs per minute (optional)"><br>
+<input type="number" id="subsPerMinute" name="subsPerMinute" placeholder="Sub gain rate (optional)"><br>
 <input type="submit" value="Set Values" ONCLICK="submit(); updateSubs()"><br>
+<input type="checkbox" id="stop" name="stop" value="stop" ONCLICK="stopAtZero()">
+<label for="stop">Non-negative counts only</label><br>
+<select id="rateOption">
+    <option value="secs">Rate in subs/second</option>
+    <option value="mins">Rate in subs/minute</option>
+    <option value="hrs">Rate in subs/hour</option>
+</select>
 <div align="left" style="font-family: Arial">
 <text>This site is not affiliated with </text><a href="https://livecounts.net" style="color: #08f">livecounts.net</a>
 </div>
