@@ -1,0 +1,51 @@
+<html>
+    <noscript>Bruh you need to enable JavaScript for this to work!</noscript>
+    <link rel=stylesheet href="https://randomperson3465.github.io/src/css/livecounts-compare.css">
+    <body>
+        <div align="left" style="font-size: 12px">
+            <input type="text" id="channelSubmitName1" name="channelSubmitName1" placeholder="Channel Name 1">
+            <input type="text" id="channelSubmitName2" name="channelSubmitName2" placeholder="Channel Name 2">
+            <input type="number" id="countSubmit1" name="countSubmit1" placeholder="Subs for channel 1">
+            <input type="number" id="countSubmit2" name="countSubmit2" placeholder="Subs for channel 2">
+            <input type="file" style="color: #fa6a6a" id="file1" name="file1" accept="image/png, image/jpeg">
+            <label for="file1" style="color: #fa6a6a">Image for channel 1</label>
+            <input type="file" style="color: #1a5a1a" id="file2" name="file2" accept="image/png, image/jpeg">
+            <label id="label2" for="file2" style="color: #1a5a1a">Image for channel 2</label>
+            <input type="submit" value="Set Values" ONCLICK="submit()">
+            <input type="checkbox" id="night" name="night" value="night" ONCLICK="toggleNightMode()">
+            <label id="nightLabel" for="night">Night mode</label>
+        </div>
+        <header>
+            <h1 id="title">Sub battle title</h1>
+            <h5 id="byline"><a href="https://livecounts.net/battle">The real livecounts is here.</a> This site is not affilated with livecounts in any way.</h5>
+        </header>
+        <div class="subSection">
+            <div class="subArea" id="subArea1">
+                <img class="channelThumbnail" id="channelThumbnail1" alt="This image could not be displayed." src="https://yt3.ggpht.com/-rJq9gk1QIis/AAAAAAAAAAI/AAAAAAAAAAA/Kx4wkvKOfxY/s88-c-k-no-mo-rj-c0xffffff/photo.jpg">
+                <input class="subscribeButton" id="subscribeButton1" type="submit" value="Subscribe!">
+                <div class="channelName" id="channelName1">
+                    <text id="name1">PewDiePie</text>
+                </div>
+                <div class="channelSubs odometer odometer-auto-theme" id="channelSubs1">
+                </div>
+            </div>
+            <div class="subArea" id="subArea2">
+                <img class="channelThumbnail" id="channelThumbnail2" alt="This image could not be displayed." src="https://yt3.ggpht.com/-8ZnBMvGyRbQ/AAAAAAAAAAI/AAAAAAAAAAA/_Hp2swLOznQ/s88-c-k-no-mo-rj-c0xffffff/photo.jpg">
+                <input class="subscribeButton" id="subscribeButton2" type="submit" value="Subscribe!">
+                <div class="channelName" id="channelName2">
+                    <text id="name2">T-Series</text>
+                </div>
+                <div class="channelSubs odometer odometer-auto-theme" id="channelSubs2">
+                </div>
+            </div>
+        </div>
+        <div id="container">
+            <div class="odometer odometer-auto-theme" id="smallCount">
+            </div>
+            <div id="smallText">difference</div>
+        </div>
+        <div id="updateText"><i>updated every 10 seconds</i></div>
+        <script src="https://randomperson3465.github.io/src/js/livecounts-compare.js"></script>
+        <script src="https://github.hubspot.com/odometer/odometer.js"></script>
+    </body>
+</html>
