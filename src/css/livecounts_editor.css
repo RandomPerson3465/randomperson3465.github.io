@@ -20,6 +20,7 @@ h5 {
 #channelName,
 #channelSubs,
 #subscribeButton,
+#container,
 .odometer.odometer-auto-theme .odometer-digit .odometer-value.odometer-last-value,
 .odometer.odometer-theme-default .odometer-digit .odometer-value.odometer-last-value,
 canvas {
@@ -118,6 +119,10 @@ body {
 #channelSubs {
     transition: color 2s ease
 }
+#channelSubs2,
+#title {
+    font-size: 4.5vw
+}
 #channelName {
     font-size: 3vw;
     top: 34.5%
@@ -150,6 +155,13 @@ a {
 }
 #subscribeButton:active {
     background-color: #08f
+}
+#container {
+    top: 66.5%;
+    width: 40%
+}
+#smallText {
+    font-size: 2.5vw
 }
 
 canvas {
@@ -193,6 +205,8 @@ input[type="checkbox"] {
     }
 }
 @media only screen and (min-aspect-ratio: 5/3) {
+    #channelSubs2,
+    #smallText,
     h1,
     h5 {
         display: none
