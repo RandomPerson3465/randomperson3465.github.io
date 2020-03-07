@@ -12,10 +12,14 @@
 <input type="number" id="subsPerMinute" name="subsPerMinute" placeholder="Sub gain rate (optional)"><br>
 <input type="number" id="subsAudit" name="subsAudit" placeholder="Press A to audit this many subs"><br>
 <input id="submitButton" type="submit" value="Set Values" ONCLICK="submit(); updateSubs()"><br>
-<input type="checkbox" id="nonNegOnly" name="nonNegOnly" value="nonNegOnly" ONCLICK="stopAtZero()">
+<input type="checkbox" id="nonNegOnly" name="nonNegOnly" value="nonNegOnly">
 <label id="nonNegLabel" for="nonNegOnly">Non-negative counts only</label><br>
 <input type="checkbox" id="night" name="night" value="night" ONCLICK="toggleNightMode()">
-    <label id="nightLabel" for="night">Night mode</label><br>
+<label id="nightLabel" for="night">Night mode</label><br>
+<input type="checkbox" id="unsub" name="unsub" value="unsub">
+<label for="unsub" id="unsubLabel">Occasionally remove subs (or add if rate is negative)</label><br>
+<input type="checkbox" id="removeOld" name="removeOld" value="removeOld">
+<label for="removeOld" id="removeOldLabel">Only show last 1000 graph values</label><br>
 <select id="rateOption">
     <option value="secs">Rate in subs/second</option>
     <option value="mins">Rate in subs/minute</option>
@@ -24,13 +28,20 @@
 </div>
 <div align="left" style="font-family: Arial">
 <text id="info">This site is not affiliated with </text><a href="https://livecounts.net" style="color: #08f">livecounts.net</a><br>
-<text id="log" style="font-family: Monospace; font-size: 14">Press P to pause, H to hide settings, R to reset subs</text><br>
+<text id="log" style="font-family: Monospace; font-size: 14">P to pause subs, R to reset, H to hide settings, C to clear graph</text><br>
 </div>
 <div id="container">
     <div class="odometer" id="channelSubs2">10</div>
     <div id="smallText">subscribers to 10</div>
 </div>
+<div style="margin-bottom: 50%;">
+    <canvas id="canvas" width="500" height="300">
+    </canvas>
+</div>
 <script src="/src/js/livecounts-editor.js"></script>
+<script type="text/javascript">
+var values = []; var times = []; let labels = false; var useTimes = true; var maxLabelsX = 5; var maxLabelsY = 3; var maxValues = 1000; let r = false; var noDecimals = true; const canvas = document.getElementById("canvas"); if (canvas.getContext) { var ctx = canvas.getContext("2d") } const width = canvas.width; const height = canvas.height; function formatTime(time, enableSeconds) { let hours = new Date(time).getHours(); let mins = new Date(time).getMinutes(); let secs = new Date(time).getSeconds(); if (typeof hours === "number" && hours < 10) hours = "0" + hours.toString(); if (typeof mins === "number" && mins < 10) mins = "0" + mins.toString(); if (typeof secs === "number" && secs < 10) secs = "0" + secs.toString(); hours = hours.toString(); mins = mins.toString(); secs = secs.toString(); let str = `${hours}:${mins}`; if (enableSeconds) str = str + `:${secs}`; return str; } function addNext() { values.push((nonNegOnly.checked && count < 0) ? 0 : count); times.push(Date.now()); if (values.length > maxValues && removeOld.checked) { values = values.slice(maxValues - values.length); times = times.slice(maxValues - values.length); } let xLabels = []; let yLabels = []; for (var a = 0; a < maxLabelsX; a++) { xLabels.push(Math.round(a * values.length / maxLabelsX)); } var range = Math.max(...values) - Math.min(...values); if (!range) { range = 1; r = true; } else { r = false; } ctx.clearRect(0, 0, canvas.width, canvas.height); for (var aa = 0; aa < maxLabelsY; aa++) { if (labels) { yLabels.push((aa * range / maxLabelsY) + Math.min(...values)); const ints = values.filter(v => v.toString() === Math.round(v).toString()); if (noDecimals) { ctx.font = "20px Serif"; ctx.textAlign = "right"; ctx.fillStyle = night.checked ? "#fff" : "#000"; ctx.fillText(Math.round(yLabels[aa]), width, height - ((aa / maxLabelsY) * height)); } else { ctx.font = "20px Serif"; ctx.textAlign = "right"; ctx.fillStyle = night.checked ? "#fff" : "#000"; ctx.fillText(yLabels[aa].toFixed(4), width, height - ((aa / maxLabelsY) * height)); } ctx.beginPath(); ctx.strokeStyle = night.checked ? "#7f7f7f" : "#4f4f4f"; ctx.lineWidth = 1; ctx.moveTo(0, (aa / maxLabelsY) * height); ctx.lineTo(width, (aa / maxLabelsY) * height); ctx.stroke(); } } ctx.strokeStyle = night.checked ? "#4babdb" : "#6b0a0a"; ctx.lineWidth = 3; ctx.beginPath(); ctx.moveTo(0, height - ((values[0] - Math.min(...values)) * height / range)); for (var i = 2; i <= values.length; i++) { if (values[i - 1] === Infinity) { values[i - 1] = 1e308; } if (values[i - 1] === -Infinity) { values[i - 1] = -1e308; } if (isNaN(values[i - 1])) { values[i - 1] = 0; } ctx.lineTo(((i - 1) / (values.length - 1)) * width, height - ((values[i - 1] - Math.min(...values)) * height / range)); ctx.stroke(); ctx.font = "20px Serif"; ctx.textAlign = "center"; ctx.fillStyle = night.checked ? "#fff" : "#000"; if (labels) { if (values.length <= maxLabelsX || xLabels.includes(i - 1)) { if (useTimes) { ctx.fillText(`${formatTime(times[i-1], false)}`, ((i - 1) / (values.length - 1)) * width, height - 15, 50); } else { ctx.fillText((i - 1).toString(), ((i - 1) / (values.length - 1)) * width, height - 15, 50); } } ctx.moveTo(((i - 1) / (values.length - 1)) * width, height - ((values[i - 1] - Math.min(...values)) * height / range)); } } ctx.font = "20px Serif"; ctx.textAlign = "right"; ctx.fillStyle = night.checked ? "#fff" : "#000"; if (labels) { if (r) { ctx.fillText(Math.floor((Math.max(...values)) + 1).toString(), width, 25); } else { ctx.fillText(Math.floor(Math.max(...values)).toString(), width, 25); } if (values.length > maxLabelsX) { for (var b = 1; b <= maxLabelsX; b++) { ctx.beginPath(); ctx.strokeStyle = night.checked ? "#7f7f7f" : "#4f4f4f"; ctx.lineWidth = 1; ctx.moveTo((xLabels[b - 1] / (values.length - 1)) * width, 0); ctx.lineTo((xLabels[b - 1] / (values.length - 1)) * width, height); ctx.stroke() } } else { for (var c = 2; c <= values.length; c++) { ctx.beginPath(); ctx.strokeStyle = night.checked ? "#7f7f7f" : "#4f4f4f"; ctx.lineWidth = 1; ctx.moveTo(((c - 1) / (values.length - 1)) * width, 0); ctx.lineTo(((c - 1) / (values.length - 1)) * width, height); ctx.stroke(); } } } } setInterval(addNext, 2000)
+</script>
 <script src="https://github.hubspot.com/odometer/odometer.js"></script>
 </body>
 </html>
