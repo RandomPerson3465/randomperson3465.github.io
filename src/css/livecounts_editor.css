@@ -8,6 +8,9 @@ h5 {
     right: 0;
     margin: 0 auto
 }
+body {
+    text-align: center
+}
 .odometer.odometer-auto-theme,
 .odometer.odometer-auto-theme .odometer-digit,
 .odometer.odometer-theme-default,
@@ -47,9 +50,7 @@ canvas {
 #subscribeButton,
 .odometer.odometer-auto-theme .odometer-value,
 .odometer.odometer-theme-default .odometer-value,
-body {
-    text-align: center
-}
+
 .odometer.odometer-auto-theme .odometer-digit .odometer-ribbon,
 .odometer.odometer-theme-default .odometer-digit .odometer-ribbon {
     display: block
@@ -115,11 +116,20 @@ body {
     font-family: Arial;
     overflow: hidden
 }
-#channelName,
-#channelSubs {
-    transition: color 2s ease
+#channelName {
+    text-align: center
 }
-#channelSubs2,
+#channelSubs {
+    transition: color 2s ease;
+    text-align: center
+}
+#channelSubs2 {
+    text-align: center;
+    font-size: 4.5vw
+}
+#smallText {
+    text-align: center
+}
 #title {
     font-size: 4.5vw
 }
@@ -163,11 +173,13 @@ a {
 #smallText {
     font-size: 2.5vw
 }
-
 canvas {
-    width: 100%;
-    height: 100%;
-    display: block
+    width: 25%;
+    height: 25%;
+    left: 75%;
+    bottom: 75%;
+    margin: 0px 0px 0px 0px;
+    
 }
 iframe {
     margin: 0px 5px;
@@ -219,4 +231,4 @@ input[type="checkbox"] {
     }
 }
 
-/* Lol this is just a copy of livecounts.net's css file */
+/* The real livecounts is at livecounts.net, parts of this file are copied from it */
