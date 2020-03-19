@@ -201,8 +201,25 @@ iframe {
 }
 input[type="checkbox"] {
     margin: 0px 0px 0px 0px;
-    width: 22px;
-    height: 22px;
+    width: 15px;
+    height: 15px;
+}
+
+input[type="text"] {
+    margin: 0px 0px 0px 0px;
+    width: 12%;
+    height: 2%
+}
+
+input[type="number"] {
+    margin: 0px 0px 0px 0px;
+    width: 12%;
+    height: 2%
+}
+
+#log {
+    margin: 0px 0px 0px 0px;
+    font-size: 10
 }
 
 @media only screen and (min-aspect-ratio: 6/5) {
