@@ -130,7 +130,7 @@ function toggleNightMode() {
         nightLabel.style.color = "#000";
         container.style.color = "#000";
         unsubLabel.style.color = "#000";
-        removeOldLabel.style.color = "#fff";
+        removeOldLabel.style.color = "#000";
     }
 }
 
