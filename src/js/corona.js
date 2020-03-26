@@ -10,6 +10,7 @@
     
     async function getCoronaStats() {
         let request = await fetch("https://corona.lmao.ninja/all")
+        request.setHeader('Access-Control-Allow-Origin', '*')
         let data = await request.json().catch(() => {})
         if (!data) return;
         count.innerHTML = data.cases
