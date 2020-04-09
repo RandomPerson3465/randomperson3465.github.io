@@ -1,21 +1,48 @@
-<html>
-<head><title>RandomPerson3465's website</title></head>
-<link rel=stylesheet href="/src/css/main.css">
-<body style="background-color: #aaa">
- <h1 style="text-align: center; font-size: 60">RandomPerson3465</h1>
- <div>
- <h1 style="font-size: 36">Pages on this site</h1>
- <li><a href="/livecountsedit">Fake live sub count creator</a></li>
- <li><a href="/livecountsedit/battle">Fake live sub count (battle mode) [Beta]</a></li>
- <li><a href="/corona">Coronavirus (COVID-19) statistics</a></li>
- </div>
- <div>
- <h1 style="font-size: 36">Other items</h1>
- <li><a href="/discord">Discord server</a></li>
- <li><a href="https://twitter.com/randomguy3465">My new Twitter account</a></li>
- <li><a href="https://www.pointsprizes.com/blg/18020944/638/20-best-minecraft-mods-in-2019">Please click this - You can get free ROBUX with it (no joke, no scam, 100% legal)</a></li>
- <text>Last updated - 21 March 2020</text>
- </div>
- </div>
-</body>
+<html> 
+    <link href='https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='/src/css/main.css' rel='stylesheet' type='text/css'>
+    <head>
+        <title>RandomPerson3465</title>
+    </head>
+    <body>
+        <noscript>WARNING: Please enable JavaScript on your browser!</noscript>
+        <h1 id="title">RandomPerson3465</h1>
+        <div>
+            <h2>Pages</h2>
+            <li><a href="/livecountsedit">Livecountsedit</a></li>
+            <li><a href="/corona">Coronavirus (COVID-19) counters</a></li>
+        </div>
+        <div>
+            <h2>Socials</h2>
+            <li><a href="https://socialblade.com/youtube/channel/UC5Zyt6WcWcS5dYz07pFWZ5g">YouTube channel (SocialBlade stats are given instead because it was deleted Aug 14, 2019)</a></li>
+            <li><a href="https://twitter.com/randomguy3465">Twitter</a></li>
+            <li><a href="/discord">Discord</a></li>
+        </div>
+        <div>
+            <h2>Shoutouts</h2>
+            <li><a href="https://forms.gle/oG6NBap3ASpuxofU7">Fill out this form to be featured on this page! This should update weekly.</a></li>
+        </div>
+        <h2>Last updated on: April 9th, 2020</h2>
+        <script>
+            window.onload = () => {
+                document.getElementById("title").innerHTML = "RandomPerson1000"
+                document.getElementById("title").style.color = "rgba(255, 255, 255, 0.2)"
+                var x = 1000;
+                var y = 0;
+                var z = 1;
+                var w = 0.25;
+                function update() {
+                    console.log("a")
+                    y = 1 - (1/(z ** Math.sqrt(3)))
+                    x = (2465 * y) + 1000
+                    w = 0.25 + (0.75 * (z/90))
+                    z++
+                    document.getElementById("title").innerHTML = "RandomPerson" + Math.ceil(x)
+                    document.getElementById("title").style.color = `rgba(255, 255, 255, ${w})` 
+                    if (Math.ceil(x) === 3465) clearInterval(interval)
+                }
+                let interval = setInterval(update, 10)
+            }
+        </script>
+    </body>
 </html>
