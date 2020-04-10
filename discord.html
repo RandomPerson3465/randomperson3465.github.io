@@ -6,7 +6,7 @@
     <link href='https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <link href='/src/css/main.css' rel='stylesheet' type='text/css'>
     <body>
-        <h1>RandomPerson3465</h1>
+        <h1 id="title">RandomPerson3465</h1>
         <div>
             <h2>Discord Rules</h2>
             <ol>
@@ -29,5 +29,25 @@
             <li><a href="https://forms.gle/Hjt7rYcRWWfQRcne9">Request access to private server</a></li>
             <li><a href="https://forms.gle/bepRT6oUZi3LMDjW9">Ban appeals</a></li>
         </div>
+        <script>
+            window.onload = () => {
+                document.getElementById("title").innerHTML = "RandomPerson1000"
+                document.getElementById("title").style.color = "rgba(255, 255, 255, 0.2)"
+                var x = 1000;
+                var y = 0;
+                var z = 1;
+                var w = 0.25;
+                function update() {
+                    y = 1 - (1/(z ** Math.sqrt(3)))
+                    x = (2465 * y) + 1000
+                    w = 0.25 + (0.75 * (z/90))
+                    z++
+                    document.getElementById("title").innerHTML = "RandomPerson" + Math.ceil(x)
+                    document.getElementById("title").style.color = `rgba(255, 255, 255, ${w})` 
+                    if (Math.ceil(x) === 3465) clearInterval(interval)
+                }
+                let interval = setInterval(update, 10)
+            }
+        </script>
     </body>
 </html>
