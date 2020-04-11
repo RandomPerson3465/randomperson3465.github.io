@@ -6,7 +6,7 @@ async function request() {
     description.innerHTML = "MrBeast Gaming - Coming Soon SUBSCRIBE OR ELSE"
     count.innerHTML = Math.round(res.estimated)
     notes.innerHTML = "WARNING: This count can behave weirdly due to how it works."
-    chart.series[0].addPoint([Date.now(), res.estimated])
+    chart.series[0].addPoint([Date.now(), Math.round(res.estimated)])
 
 }
 request()
