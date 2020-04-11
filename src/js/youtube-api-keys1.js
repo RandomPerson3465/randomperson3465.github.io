@@ -41,5 +41,9 @@ const APIKeys = [
     "AIzaSyCz6Q4wFDPzXNJ2P3LsQ8llBcHkWvSW59Y",
     "AIzaSyAi86IUF2WMPekZhCexhAHIjcPJ9CjoRQ4",
     "AIzaSyB12-i9eAIbhjxS6HgWACRN8IRxUp2IudI",
-    "AIzaSyCh2RO5q6RcJYgOzue1Dag_UWuDkMbel74"
+    "AIzaSyCh2RO5q6RcJYgOzue1Dag_UWuDkMbel74",
+    "AIzaSyDROszBUlliIFlnyPHMUiA4lpOM58cQlPM",
+    "AIzaSyDh3vjrzYLqniXfCmAREiuZmc1Q9d1dc9I",
+    "AIzaSyALpniziCo8SRwDglSit8QYZr6Tl2AHiYs",
+    "AIzaSyAow1-gyaTvFMbtXVlbLKSQnvQUhNbBRak"
 ]
