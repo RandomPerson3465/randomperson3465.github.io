@@ -1,6 +1,5 @@
 
 async function request() {
-    let key = APIKeys[Math.floor(Math.random() * APIKeys.length)]
     let req = await fetch(`http://random3465api.glitch.me/api/mrbeastgaming`)
     let res = await req.json().catch(error => notes.innerHTML = "An error occured.")
     document.getElementById("name") = "MrBeast Gaming"
@@ -10,6 +9,7 @@ async function request() {
     chart.series[0].addPoint([Date.now(), res.estimated])
 
 }
+request()
 
 var chart = new Highcharts.chart({
   chart: {
