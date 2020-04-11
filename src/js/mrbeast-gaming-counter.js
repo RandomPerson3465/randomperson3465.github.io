@@ -1,6 +1,6 @@
 
 async function request() {
-    let req = await fetch(`http://random3465api.glitch.me/api/mrbeastgaming`)
+    let req = await fetch(`https://random3465api.glitch.me/api/mrbeastgaming`)
     let res = await req.json().catch(error => notes.innerHTML = "An error occured.")
     document.getElementById("name") = "MrBeast Gaming"
     description.innerHTML = "MrBeast Gaming - Coming Soon SUBSCRIBE OR ELSE"
