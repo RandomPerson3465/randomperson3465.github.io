@@ -20,9 +20,11 @@
         </div>
         <div>
             <h2>Shoutouts</h2>
-            <li><a href="https://forms.gle/oG6NBap3ASpuxofU7">Fill out this form to be featured on this page! This should update weekly.</a></li>
+            <div id="shoutout" style="background-color: rgba(34, 35, 40); width: 800px">
+            </div>
+            <h3><a href="https://forms.gle/oG6NBap3ASpuxofU7">Fill out this form to be featured on this page! New shoutouts weekly.</a></h3>
         </div>
-        <h2>Last updated on: April 12th, 2020</h2>
+        <h2>Last updated on: April 9th, 2020</h2>
         <script>
             window.onload = () => {
                 document.getElementById("title").innerHTML = "RandomPerson1000"
@@ -43,5 +45,6 @@
                 let interval = setInterval(update, 10)
             }
         </script>
+        <script src="/src/js/shoutouts.js"></script>
     </body>
 </html>
