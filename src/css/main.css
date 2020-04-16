@@ -10,9 +10,21 @@ h1 {
 h2 {
     font-size: 36
 }
-li {
+li, h3 {
     font-size: 30
 }
 a {
     color: #4babdb
+}
+.shoutoutName {
+    font-size: 28;
+    margin: 0px 0px 10px 20px
+}
+.shoutoutDescription {
+    font-size: 24;
+    margin: 0px 0px 10px 20px
+}
+.shoutoutLink {
+    font-size: 24;
+    margin: 0px 0px 10px 20px
 }
