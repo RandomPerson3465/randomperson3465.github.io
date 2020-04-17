@@ -9,7 +9,7 @@
     }
     
     async function getCoronaStats() {
-        let request = await fetch("https://corona.lmao.ninja/all", { mode: "cors" })
+        let request = await fetch("https://corona.lmao.ninja/v2/all", { mode: "cors" })
         let data = await request.json().catch(() => {})
         if (!data) return;
         count.innerHTML = data.cases
