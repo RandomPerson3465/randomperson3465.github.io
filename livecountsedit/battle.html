@@ -1,20 +1,27 @@
 <html>
-<head>
-<meta http-equiv = "refresh" content = "3; url = http://youtube.com/watch?%76=%64%51%77%34%77%39%57%67%58%63%51"/>
-</head>
-<body>
-    <text id="message"> Loading... Please wait.</text>
-</body>
-<script>
-    let x = 0
-    function update() {
-        x++
-        let dots = ".";
-        for (i = 0; i<x%3; i++) {
-            dots += "."
+    <head><title>Livecountsedit Battle mode is coming back</title></head>
+    <link href='https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='/src/css/main.css' rel='stylesheet' type='text/css'>
+    <link href='/src/css/odometer.css' rel='stylesheet' type='text/css'>
+    <body>
+    <style type="text/css">
+        body { 
+            text-align: center
         }
-        message.innerHTML = `Loading${dots} Please wait.`
-    }
-    setInterval(update, 350)
-</script>
+        .odometer {
+            font-size: 175;
+            font-family: Roboto
+        }
+    </style>
+        <h2>Cool, just</h2>
+        <div id="timeleft" class="odometer">0</div>
+        <h2>more nanoseconds until RandomPerson3465 adds battle mode back!</h2>
+    </body>
+    <script>
+        function update() {
+            timeleft.innerHTML = (1588550400000 - Date.now()) * 1e6
+        }
+        setInterval(update, 311)
+    </script>
+    <script src="/src/js/odometer.js"></script>
 </html>
