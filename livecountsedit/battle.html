@@ -1,27 +1,89 @@
 <html>
-    <head><title>Livecountsedit Battle mode is coming back</title></head>
-    <link href='https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-    <link href='/src/css/main.css' rel='stylesheet' type='text/css'>
-    <link href='/src/css/odometer.css' rel='stylesheet' type='text/css'>
-    <body>
-    <style type="text/css">
-        body { 
-            text-align: center
-        }
-        .odometer {
-            font-size: 175;
-            font-family: Roboto
-        }
-    </style>
-        <h2>Cool, just</h2>
-        <div id="timeleft" class="odometer">0</div>
-        <h2>more nanoseconds until RandomPerson3465 adds battle mode back!</h2>
-    </body>
-    <script>
-        function update() {
-            timeleft.innerHTML = (1588550400000 - Date.now()) * 1e6
-        }
-        setInterval(update, 311)
-    </script>
-    <script src="/src/js/odometer.js"></script>
+   <head>
+      <title>Livecountsedit Battle mode is coming back</title>
+   </head>
+   <link href='https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+   <link href='/src/css/main.css' rel='stylesheet' type='text/css'>
+   <link href='/src/css/odometer.css' rel='stylesheet' type='text/css'>
+   <body>
+      <style type="text/css">
+         body { 
+         text-align: center
+         }
+         .odometer {
+         font-size: 175;
+         font-family: Roboto
+         }
+      </style>
+      <h2>Cool, just</h2>
+      <div id="timeleft" class="odometer">0</div>
+      <h2>more nanoseconds until RandomPerson3465 adds battle mode back!</h2>
+      <div id="chart"></div>
+      <script src="https://code.highcharts.com/stock/highstock.js"></script>
+      <script src="/src/js/odometer.js"></script>
+      <script>  
+         var chart = new Highcharts.chart({
+           chart: {
+               renderTo: 'chart',
+               type: 'spline',
+                 zoomType: 'x',
+                 backgroundColor: 'transparent',
+                 plotBorderColor: 'transparent'
+           },
+           title: {
+               text: 'Seconds until RandomPerson3465 adds battle mode back!',
+               style: {
+                   color: '#fff'
+               }
+           },
+           xAxis: {
+               type: 'datetime',
+               tickPixelInterval: 500,
+                 gridLineColor: '#999',
+                 labels: {
+                     style: {
+                         color: '#fff'
+                     }
+                 },
+                 lineColor: '#999',
+                 minorGridLineColor: '#999',
+                 tickColor: '#999',
+                 title: {
+                     style: {
+                         color: '#fff'
+                     }
+                 }
+           },
+           yAxis: {
+               title: {
+                   text: ''
+               },
+                 gridLineColor: '#999',
+                 labels: {
+                     style: {
+                         color: '#fff'
+                     }
+                 },
+                 lineColor: '#999',
+                 minorGridLineColor: '#999',
+                 tickColor: '#999'
+           },
+         
+           series: [{
+             name: 'Seconds left',
+             marker: { enabled: false },
+             color: '#fff',
+             lineColor: '#fff'
+           }]
+         });
+                 
+      </script>
+      <script>
+         function update() {
+             timeleft.innerHTML = (1588550400000 - Date.now()) * 1e6
+             chart.series[0].addPoint([Date.now(), (1588550400000 - Date.now()) / 1e3])
+         }
+         setInterval(update, 311)
+      </script>
+   </body>
 </html>
