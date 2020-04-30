@@ -1,0 +1,118 @@
+<html>
+<link href='https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Roboto%20Condensed&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+<style>
+    body {
+        background-color: #224;
+        text-align: center;
+        color: #fff
+    }
+    
+    h1 {
+        font-size: 60;
+        font-family: Lato
+    }
+    
+    h2 {
+        font-size: 20;
+        font-family: Lato
+    }
+    
+    .odometer {
+        font-size: 250;
+        font-family: Roboto Condensed
+    }
+</style>
+<link rel=stylesheet href="https://github.hubspot.com/odometer/themes/odometer-theme-minimal.css">
+<h1 id="name"><a href="https://discord.gg/jkZ9Wt">Ping Spam Server</a></h1>
+<h2 id="description">Live Ping Counter - Updates every minute</h2>
+<div id="count" class="odometer">0</div>
+<h2 id="notes">Notes</h2>
+<div id="chart"></div>
+<script src="https://code.highcharts.com/stock/highstock.js"></script>
+<script>
+    const _0x1964 = ['Big\x20brain\x20console\x20stuff\x20incoming...', 'transparent', 'now', '#999', 'totalPings', 'innerHTML', 'json', 'totalFailed', 'chart', 'pingsPerMinute', '#fff', 'series', 'Pings/second:\x20', 'Pings', 'addPoint', '\x20|\x20Successful\x20pings:\x20', 'info', 'spline', 'datetime'];
+    (function(_0x57f49a, _0x1964dc) {
+        const _0x1f2bc9 = function(_0x4a8090) {
+            while (--_0x4a8090) {
+                _0x57f49a['push'](_0x57f49a['shift']());
+            }
+        };
+        _0x1f2bc9(++_0x1964dc);
+    }(_0x1964, 0x1d5));
+    const _0x1f2b = function(_0x57f49a, _0x1964dc) {
+        _0x57f49a = _0x57f49a - 0x0;
+        let _0x1f2bc9 = _0x1964[_0x57f49a];
+        return _0x1f2bc9;
+    };
+    console[_0x1f2b('0x3')](_0x1f2b('0x6'));
+    async function request() {
+        let _0x3609f1 = await fetch('https://total-pings.glitch.me');
+        let _0x38ebfe = await _0x3609f1[_0x1f2b('0xc')]();
+        count[_0x1f2b('0xb')] = _0x38ebfe['totalPings'];
+        notes[_0x1f2b('0xb')] = _0x1f2b('0x12') + (_0x38ebfe[_0x1f2b('0xf')] / 0x3c)['toFixed'](0x1) + '\x20|\x20Failed\x20pings:\x20' + _0x38ebfe[_0x1f2b('0xd')] + _0x1f2b('0x2') + (_0x38ebfe['totalPings'] / (_0x38ebfe[_0x1f2b('0xa')] + _0x38ebfe[_0x1f2b('0xd')]) * 0x64)['toFixed'](0x2) + '%';
+        chart[_0x1f2b('0x11')][0x0][_0x1f2b('0x1')]([Date[_0x1f2b('0x8')](), _0x38ebfe[_0x1f2b('0xa')]]);
+    }
+    var chart = new Highcharts[(_0x1f2b('0xe'))]({
+        'chart': {
+            'renderTo': _0x1f2b('0xe'),
+            'type': _0x1f2b('0x4'),
+            'zoomType': 'x',
+            'backgroundColor': _0x1f2b('0x7'),
+            'plotBorderColor': _0x1f2b('0x7')
+        },
+        'title': {
+            'text': 'Live\x20Ping\x20Counter',
+            'style': {
+                'color': '#fff'
+            }
+        },
+        'xAxis': {
+            'type': _0x1f2b('0x5'),
+            'tickPixelInterval': 0x1f4,
+            'gridLineColor': _0x1f2b('0x9'),
+            'labels': {
+                'style': {
+                    'color': _0x1f2b('0x10')
+                }
+            },
+            'lineColor': _0x1f2b('0x9'),
+            'minorGridLineColor': _0x1f2b('0x9'),
+            'tickColor': '#999',
+            'title': {
+                'style': {
+                    'color': _0x1f2b('0x10')
+                }
+            }
+        },
+        'yAxis': {
+            'title': {
+                'text': ''
+            },
+            'gridLineColor': _0x1f2b('0x9'),
+            'labels': {
+                'style': {
+                    'color': '#fff'
+                }
+            },
+            'lineColor': '#999',
+            'minorGridLineColor': _0x1f2b('0x9'),
+            'tickColor': _0x1f2b('0x9')
+        },
+        'series': [{
+            'name': _0x1f2b('0x0'),
+            'marker': {
+                'enabled': ![]
+            },
+            'color': _0x1f2b('0x10'),
+            'lineColor': _0x1f2b('0x10')
+        }]
+    });
+    setInterval(request, 0xea60);
+    request();
+</script>
+<script src="https://github.hubspot.com/odometer/odometer.js"></script>
+<script src="counter.js"></script>
+
+</html>
