@@ -15,7 +15,7 @@
             font-family: Roboto Condensed;
         }
         #splash {
-            font-size: 72;
+            font-size: 60;
             font-family: Minecraft;
             color: #f93
         }
@@ -71,12 +71,12 @@
         var int = 0;
         var d = 1;
         setInterval(() => {
-            splash.style.fontSize = 72 + int
+            splash.style.fontSize = 60 + int
             if (d) int += 0.175
             else int += -0.175
             
-            if (int > 8) d = 0
-            if (int < -8) d = 1
+            if (int > 6) d = 0
+            if (int < -6) d = 1
         })
         splashes = [
             "Follow @randomguy3465 on Twitter!",
