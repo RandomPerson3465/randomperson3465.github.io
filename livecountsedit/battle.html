@@ -1,89 +1,123 @@
 <html>
-   <head>
-      <title>Livecountsedit Battle mode is coming back</title>
-   </head>
-   <link href='https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-   <link href='/src/css/main.css' rel='stylesheet' type='text/css'>
-   <link href='/src/css/odometer.css' rel='stylesheet' type='text/css'>
-   <body>
-      <style type="text/css">
-         body { 
-         text-align: center
-         }
-         .odometer {
-         font-size: 175;
-         font-family: Roboto
-         }
-      </style>
-      <h2>Cool, just</h2>
-      <div id="timeleft" class="odometer">0</div>
-      <h2>more nanoseconds until RandomPerson3465 adds battle mode back!</h2>
-      <div id="chart"></div>
-      <script src="https://code.highcharts.com/stock/highstock.js"></script>
-      <script src="/src/js/odometer.js"></script>
-      <script>  
-         var chart = new Highcharts.chart({
-           chart: {
-               renderTo: 'chart',
-               type: 'spline',
-                 zoomType: 'x',
-                 backgroundColor: 'transparent',
-                 plotBorderColor: 'transparent'
-           },
-           title: {
-               text: 'Seconds until RandomPerson3465 adds battle mode back!',
-               style: {
-                   color: '#fff'
-               }
-           },
-           xAxis: {
-               type: 'datetime',
-               tickPixelInterval: 500,
-                 gridLineColor: '#999',
-                 labels: {
-                     style: {
-                         color: '#fff'
-                     }
-                 },
-                 lineColor: '#999',
-                 minorGridLineColor: '#999',
-                 tickColor: '#999',
-                 title: {
-                     style: {
-                         color: '#fff'
-                     }
-                 }
-           },
-           yAxis: {
-               title: {
-                   text: ''
-               },
-                 gridLineColor: '#999',
-                 labels: {
-                     style: {
-                         color: '#fff'
-                     }
-                 },
-                 lineColor: '#999',
-                 minorGridLineColor: '#999',
-                 tickColor: '#999'
-           },
-         
-           series: [{
-             name: 'Seconds left',
-             marker: { enabled: false },
-             color: '#fff',
-             lineColor: '#fff'
-           }]
-         });
-                 
-      </script>
-      <script>
-         function update() {
-             timeleft.innerHTML = (1588550400000 - Date.now()) * 1e6
-             chart.series[0].addPoint([Date.now(), (1588550400000 - Date.now()) / 1e3])
-         }
-         setInterval(update, 311)
-      </script>
-   </body>
+    <head><title>Livecountsedit battle mode | May 4th</title></head>
+    <style>
+        body {
+            text-align: center;
+            color: #fff;
+            background-color: #224;
+        }
+        h1 {
+            font-size: 72;
+            font-family: Lato
+        }
+        #timeLeft {
+            font-size: 200;
+            font-family: Roboto Condensed;
+        }
+        #splash {
+            font-size: 72;
+            font-family: Minecraft;
+            color: #f93
+        }
+        @font-face {
+  font-family: 'Minecraft';
+  src: url("/assets/minecraftfont.eot");
+  src: url("/assets/minecraftfont.woff") format("woff"), url("/assets/minecraftfont.ttf") format("truetype"); 
+        }
+    </style>
+    <link href='https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto%20Condensed&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <h1>Livecountsedit battle mode v2 releases in</h1>
+    <h1 id="timeLeft"></h1>
+    <text id="splash"></text>
+    <script>
+        function format(x) {
+            if (typeof x !== "number") return null;
+            if (x < 1000) return `Releasing soon!`
+            let days = Math.floor(x / 8.64e7)
+            if (days === 0) { 
+                days = ""
+            } else {
+                days = `${days}d`
+            }
+            x = x - (Math.floor(x / 8.64e7) * 8.64e7)
+            let hours = Math.floor(x / 3.6e6)
+            if (hours === 0) {
+                hours = ""
+            } else {
+                hours = `${hours}h`
+            }
+            x = x - (Math.floor(x / 3.6e6) * 3.6e6)
+            let minutes = Math.floor(x / 6e4)
+            if (minutes === 0) {
+                minutes = ""
+            } else {
+                minutes = `${minutes}m`
+            }
+            x = x - (Math.floor(x / 6e4) * 6e4)
+            let seconds = Math.floor(x / 1e3)
+            if (seconds === 0) {
+                seconds = ""
+            } else {
+               seconds = `${seconds}s`
+            }
+            x = x - (Math.floor(x / 1e3) * 1e3)
+            return `${days} ${hours} ${minutes} ${seconds}`
+        }
+        setInterval(() => {
+            timeLeft.innerHTML = format(new Date("2020-05-04T00:00:00.000Z").getTime() - Date.now())
+        })
+        
+        var int = 0;
+        var d = 1;
+        setInterval(() => {
+            splash.style.fontSize = 72 + int
+            if (d) int += 0.175
+            else int += -0.175
+            
+            if (int > 8) d = 0
+            if (int < -8) d = 1
+        })
+        splashes = [
+            "Follow @randomguy3465 on Twitter!",
+            "Fortnite is gay!",
+            "Minecraft is epic!",
+            "Check out the main livecountsedit!",
+            "NextCounts just released!",
+            "Dislike TheTekkitRealm's fake livestreams!",
+            "Subscribe to MrBeast Gaming!",
+            "Never gonna give you up, Never gonna let you down",
+            "Subscribe to YT Battles!",
+            "discord.gg/ayvVzcX",
+            "Unsubscribe from Skeppy!",
+            "Livecountsedit v4 coming soon!",
+            "",
+            "If you're reading this you're bored",
+            "oof",
+            "Random's server got deleted!",
+            "You're just looking at orange minecraft text lol",
+            "Lorem ipsum dolor sit amet",
+            "14 million pings in Discord!",
+            "9+10=21",
+            "Please add battle mode back now!",
+            "Making fake sub counts since 29 July 2019!",
+            "WHY DID YOU REMOVE BATTLE MODE???",
+            "656,000 views from fake SocialBlade sub count!",
+            "RandomPerson3465, also known as Pointless content",
+            "Refresh the page for a better splash",
+            "Aul ov da wurz heeur arh supeld rang",
+            "Cocomelon sucks!",
+            "skeppy's fanbase is the worst",
+            "Real sub counts when?",
+            "yo, have you found out how to hack livecounts.net",
+            "dank unknown guy | T-Series sucks! rages over stupid stuff!",
+            "MyTraple is a weeb!",
+            "RandomPerson3465 is still banned from YTB's server",
+            "you should make a compare mode for the fake sub count"
+            // If you are reading this, hello inspect elementer / source viewer lol
+            // Why are you even reading this, actually it makes sense as we have more time during quarantine
+            
+        ]
+        splash.innerHTML = splashes[Math.floor(Math.random() * splashes.length)]
+    </script>
 </html>
