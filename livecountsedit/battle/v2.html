@@ -1,0 +1,47 @@
+<html>
+<link rel=stylesheet href="https://github.hubspot.com/odometer/themes/odometer-theme-minimal.css">
+<link href='https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Roboto%20Condensed&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+<link href="/src/css/battlemode.css" rel="stylesheet" type="text/css">
+<body id="body">
+    <h1 id="title"><a href="/livecountsedit/battle/docs">How to use</a> | <a href="https://discord.gg/FRKWfDp">Discord</a></h1>
+    <div class="container">
+        <div id="channel1">
+            <h1 id="channelName1" onclick="S(1)">PewDiePie</h1>
+            <br>
+            <div class="odometer" onclick="R(1)" id="channelSubs1">0</div>
+            <br>
+            <input type="number" id="setSubs1" placeholder="Subs for channel 1">
+        </div>
+        <br>
+        <div id="channel2">
+            <h1 id="channelName2" onclick="S(2)">T-Series</h1>
+            <br>
+            <div class="odometer" onclick="R(2)" id="channelSubs2">0</div>
+            <br>
+            <input type="number" id="setSubs2" placeholder="Subs for channel 2">
+        </div>
+        <br>
+    </div>
+    <div>
+        <h2 id="subGapTitle" onclick="U()">Sub Gap</h2>
+        <div class="odometer" id="subgap" onclick="T()">0</div>
+    </div>
+    <div id="chartarea">
+        <div id="chart"></div>
+    </div>
+    <script src="https://code.highcharts.com/stock/highstock.js"></script>
+    <script src="https://github.hubspot.com/odometer/odometer.js"></script>
+    <script src="/src/css/battlemode.js"></script>
+    <script>
+        
+        window.onload = () => {
+            if (Date.now() < new Date("2020-05-04T00:00:00.000Z").getTime()) {
+                document.write()
+                window.location.replace("https://randomperson3465.github.io/livecountsedit/battle")
+            }
+        }
+        
+    </script>
+</body>
+</html>
