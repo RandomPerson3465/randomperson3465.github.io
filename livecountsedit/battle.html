@@ -33,7 +33,10 @@
     <script>
         function format(x) {
             if (typeof x !== "number") return null;
-            if (x < 1000) return `Releasing soon!`
+            if (x < 1000) {
+                window.location.replace("https://randomperson3465.github.io/livecountsedit/battle/v2.html")
+                return `Releasing...`
+            }
             let days = Math.floor(x / 8.64e7)
             if (days === 0) { 
                 days = ""
