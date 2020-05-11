@@ -60,6 +60,10 @@ const Shoutouts = [{
 }, {
     name: "DitIsMick",
     youtube: "https://www.youtube.com/channel/UC7_8v02UqOaijUh0fVlb_rQ"
+}, {
+    name: "UniverseNerd"
+    description:i just want 100 subs because im losing my subscriber rates ive gained zero in the last 30 days and i usually gain 3 a month
+    youtube:"https://www.youtube.com/channel/UChxEm_iAodi_6ri6_zlqUdw"
 }]
 
 let previousShoutout;
