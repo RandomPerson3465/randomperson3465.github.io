@@ -1,65 +1,44 @@
 const Shoutouts = [{
-    name: "Tonio",
-    youtube: "https://www.youtube.com/channel/UCLUfpQGx5c8cSOaalb1VmlQ"
+    name: "Yamil Videos",
+    youtube: "https://www.youtube.com/channel/UCElBQAXeOIarbkgeAt8TOPw"
+}, {
+    name: "TBK331 CompleXX",
+    description: "So well, I'm just a content creator",
+    youtube: "https://www.youtube.com/channel/UC39_-Eip5S7ub4JnGRejxNA",
+    twitter: "https://twitter.com/TBK331_CompleXX"
 }, {
     name: "Daste",
+    description: "I do sub battles and COVID-19 stats!",
     youtube: "https://www.youtube.com/channel/UCI-FwGLrDb7j1VuK9pXeN_g",
     twitter: "https://twitter.com/DasteYT"
 }, {
-    name: "Vyle",
-    youtube: "https://www.youtube.com/user/RenzChannel"
-}, {
-    name: "XPozer",
-    youtube: "https://www.youtube.com/channel/UCrjiEKr4Sv6fl4lHrTbqUfA",
-    instagram: "https://www.instagram.com/_xpozer_",
-    twitter: "https://twitter.com/YtberJs"
-}, {
-    name: "JC Laurence",
-    description: "i just want to get 2500 subs",
-    youtube: "https://www.youtube.com/channel/UCko3Zd5Bt-06gfTllUDPpSA"
-}, {
-    name: "IvanIO",
-    description: "I'm 13 years old, and making Gaming content",
-    youtube: "https://www.youtube.com/channel/UCT2ryU039C77JULQGBN1tuQ"
-}, {
-    name: "Hola, soy Bradley Time",
-    youtube: "https://www.youtube.com/channel/UC1M1bWAq7yTIW8y1HXzFlIw"
-}, {
-    name: "Pro Gamer Player",
-    youtube: "https://www.youtube.com/c/ProGamerPlayerSW-YTB",
-    twitter: "https://twitter.com/ProGamerPIayer"
-}, {
-    name: "PROUDCaleb09-austria-hungary",
-    description: "I make YouTube videos I love to watch the Corona virus counters",
-    youtube: "https://www.youtube.com/channel/UCxx4zaoQpGXgpPgoCnwrmLw"
-}, {
-    name: "JJ Reed",
-    description: "Gaming channel, I have good content.",
-    youtube: "https://www.youtube.com/channel/UCR1F19sKEed7d5J0rAOKF5Q"
-}, {
-    name: "Yamil Videos",
-    description: "I want people to find my content and maybe enjoy it. As I don't have much of an audience to work with.",
-    youtube: "https://www.youtube.com/channel/UCElBQAXeOIarbkgeAt8TOPw"
-}, {
-    name: "Supreme Ant",
-    description: "I am a bar graph youtuber",
-    youtube: "https://www.youtube.com/channel/UCd2WR6tqqo6X_cVtRAHg2lA"
-}, {
-    name: "Chrispy",
-    description: "i'm a small youtuber and i got here from sw and yt battles im a big fan of those 2. but yeah thats basically it",
-    youtube: "https://www.youtube.com/channel/UCUu_ZM5wdV3tTcec9QVuWAg"
-}, {
     name: "LongGM",
+    description: "Vietnamese Youtuber doing Minecraft and etc., also in YTB community",
     youtube: "https://www.youtube.com/channel/UCvmonOo4_swlcshscHWnsvQ",
     twitter: "https://twitter.com/LonggmV",
-    facebook: "https://www.facebook.com/long.gm.27",
-    twitch: "https://www.twitch.tv/longgm_vn"
+    twitch: "https://twitch.tv/longgm_vn"
 }, {
-    name: "NupoK Hostory",
-    youtube: "https://www.youtube.com/channel/UCEnpiAWYucTXRjJSXBqG4tw"
+    name: "εvσℓ",
+    twitter: "twitter.com/evol_OW"
 }, {
-    name: "DitIsMick",
-    youtube: "https://www.youtube.com/channel/UC7_8v02UqOaijUh0fVlb_rQ"
+    name: "Donny",
+    description: "I'm Donny and help me Defeat Johnny!",
+    youtube: "https://www.youtube.com/channel/UCzAvky9XteutzsRdpkD6CCA"
+}, {
+    name: "Zeefeew",
+    description: "I make videos comedy,gaming and i make challenge too",
+    youtube: "https://www.youtube.com/channel/UC-6YsaQZhfLnpVNfe4GTJBg"
+}, {
+    name: "not your father in law",
+    twitter: "https://twitter.com/yeetbythewindow"
+}, {
+    name: "SuperWindows78",
+    description: "Hello, I am SuperWindows78, I do logo evolution, and Subscriber Timelapses, I am looking to be on the page of the site, I want to be more special, And I promise to upload videos using your Livecountsedit site. I have got in touch with you on Discord before, but you deleted the server. Thank you, And I hope you understand. :)",
+    youtube: "https://www.youtube.com/channel/UC6z8y5o8uaKuWTxP2zsHxiQ"
+}, {
+    name: "decorativeben",
+    description: "I am a gaming channel that would like to grow.",
+    youtube: "https://www.youtube.com/channel/UCFfye6PXQpaIBXF9kx_95wQ"
 }]
 
 let previousShoutout;
