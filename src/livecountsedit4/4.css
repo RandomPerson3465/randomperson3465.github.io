@@ -1,0 +1,43 @@
+body {
+	background-color: #611;
+	text-align: center;
+	color: #fff
+}
+
+h1 {
+	font-size: 60;
+	font-family: Lato
+}
+
+h2 {
+	font-size: 20;
+	font-family: Lato
+}
+
+.odometer {
+	font-size: 250;
+	font-family: Roboto Condensed
+}
+
+.container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	flex: 3;
+	text-align: center;
+}
+
+.counter {
+	background-color: #400;
+	width: 30%;
+}
+
+.counterTitle {
+	font-family: Lato;
+	font-size: 30
+}
+
+#smallCounter {
+	font-size: 60;
+	font-family: Roboto Condensed
+}
