@@ -1,0 +1,59 @@
+body {
+	background-color: #d0e4fe;
+	text-align: center;
+    color: #000;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+	font-size: 3em;
+}
+
+h2 {
+	font-size: 3em;
+}
+
+#chart {
+	display: none;
+}
+
+select,input[type=text],input[type=number] {
+    font-size: 1.75em;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 1%;
+    max-width: 80%
+}
+
+input[type=submit] {
+    background-color: #ddd;
+    font-size: 1.75em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+input[type=submit]:hover {
+    background-color: #c6c6c6
+}
+
+.odometer {
+	font-size: 15.5vw;
+}
+
+.container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	flex: 3;
+	text-align: center;
+}
+
+.counter {
+	background-color: #d0e4fe;
+	width: 30%
+}
+
+.counterTitle {
+	font-size: 2em;
+}
+
+#smallCounter {
+	font-size: 3.5em;
+}
