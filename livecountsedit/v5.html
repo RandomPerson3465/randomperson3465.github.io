@@ -1,0 +1,32 @@
+<html>
+<noscript>You need to enable JavaScript on your browser for this to work.</noscript>
+<link href='https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+<link href='/src/css/v5/menu.css' rel='stylesheet' type='text/css'>
+
+<body id="body">
+    <div class="menu" id="menu">
+        <h1 class="lcedit_title">Livecountsedit BETA</h1>
+        <div id="splash_container">
+            <h2 class="lcedit_splash">Splash goes here</h2>
+        </div>
+        <div class="button_container">
+            <button type="button" class="lcedit_button" onclick="openLivecountsedit()">Regular mode</button>
+            <button type="button" class="lcedit_button">Currently in Beta</button>
+            <button type="button" class="lcedit_button">​</button>
+            <button type="button" class="lcedit_button">​</button>
+            <button type="button" class="lcedit_button">​</button>
+            <button type="button" class="lcedit_button">​</button>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        const splashes = [
+            "Livecountsedit is back!"
+        ]
+        $(".lcedit_splash").text(splashes[Math.floor(Math.random()*splashes.length)])
+        function openLivecountsedit() {
+            window.location.replace("https://randomperson3465.github.io/livecountsedit/v5/beta1")
+        }
+    </script>
+</body>
+</html>
