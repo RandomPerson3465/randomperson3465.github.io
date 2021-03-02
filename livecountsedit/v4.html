@@ -1,27 +1,41 @@
 <html>
     <link href='https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Roboto%20Condensed&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <link rel=stylesheet href="/src/livecountsedit4/4.css">
     <link rel=stylesheet href="https://github.hubspot.com/odometer/themes/odometer-theme-minimal.css">
     <body>
-        <h1 id="name" onclick="N()">YouTube Channel Name</h1>
-        <h2 id="description" onclick="T()">Live Subscriber Counter</h2>
-        <h2 id="links"><a href="https://twitter.com/randomguy3465">Twitter</a> | <a href="https://discord.com/invite/FRKWfDp">Discord</a> | <a href="https://randomperson3465.github.io/livecountsedit/battle/v2.html">Battle Mode</a> | <a href="/livecountsedit/v4/docs">How to use</a></h2>
-        <div id="count" class="odometer" onclick="U()">0</div>
+        <h1 class="title" onclick="N()">YouTube Channel Name</h1>
+        <h2 class="subtitle" onclick="T()">Live Subscriber Counter</h2>
+        <div id="count" class="odometer">0</div>
         <div id="chart"></div>
-        <input id="subs" type="number" placeholder="New subscriber count"><br>
         <div class="container">
             <div class="counter">
-                <h3 class="counterTitle"><a href="https://www.youtube.com/channel/UC6z8y5o8uaKuWTxP2zsHxiQ">Shoutout 1</a></h3>
+                <h3 class="option counterTitle" onclick="W()">Options</h3>
+                <input class="option" id="subs" type="number" placeholder="New subscriber count">
+                <input class="option" id="save" type="submit" value="Save" onclick="U()">
             </div>
             <div class="counter">
                 <h3 class="counterTitle">Goal</h3>
                 <div class="odometer" id="smallCounter">0</div>
             </div>
             <div class="counter">
-                <h3 class="counterTitle"><a href="https://twitter.com/tetratk1">Shoutout 2</a></h3>
             </div>
         </div>
+        <div class="background"></div>
+        <div id="menu">
+            <p><input id="minsubs" type="number"> to <input id="maxsubs" type="number"> subscribers per <input id="amount" value="1" type="number">
+                <select id="unit">
+                    <option value="second">second(s)</option>
+                    <option value="minute">minute(s)</option>
+                    <option value="hour">hour(s)</option>
+                    <option value="day">day(s)</option>
+                </select></p>
+            <p>Abbreviated Counts<input type="checkbox" id="abbreviated"></p>
+            <p>Negative Counts<input type="checkbox" id="negative"></p>
+            <p>Graph<input type="checkbox" id="toggleGraph"></p>
+            <p>Colo(u)rs when updating<input type="checkbox" id="toggleColors"></p>
+            <input class="menu_button" id="saveSettings" type="submit" value="Save" onclick="H()"><input class="menu_button" type="submit" value="Close" onclick="W()">
+        </div>
+        <div id="toast"></div>
         <script src="https://code.highcharts.com/stock/highstock.js"></script>
         <script src="https://github.hubspot.com/odometer/odometer.js"></script>
         <script src="/src/livecountsedit4/4.js"></script>
