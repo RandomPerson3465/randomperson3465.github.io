@@ -1,0 +1,222 @@
+body {
+    text-align: center;
+    color: #fff;
+    background-color: #224;
+}
+
+a {
+    color: #4babdb
+}
+.channel {
+    text-align: center;
+    margin: 5px 10px 5px 10px;
+    width: 45%;
+    max-width: 45%;
+    background-color: #446
+}
+
+.channelName {
+    font-family: Lato;
+    font-size: 3vw;
+}
+
+.container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex: 3;
+	margin-bottom: 2%;
+	text-align: center;
+}
+.smallCounters {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	flex: 3;
+	text-align: center;
+}
+.smallCounterContainer {
+    background-color: #446;
+    width: 30%;
+    max-width: 30%
+}
+input[type=submit], button {
+    background-color: #ddd;
+    font-size: 1.75vw;
+    font-family: Lato;
+}
+
+input[type=submit]:hover, button:hover {
+    background-color: #c6c6c6
+}
+
+.odometer {
+    font-size: 6vw;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+#subGap {
+    font-size: 4vw;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+select,input[type=text],input[type=number] {
+    font-size: 1.75vw;
+    font-family: Lato;
+    margin-bottom: 1%;
+}
+input[type=checkbox] {
+  height: 1.75vw;
+  width: 1.75vw;
+}
+
+.subInput {
+    max-width: 80%;
+}
+
+.title {
+    font-size: 3vw;
+    font-family: Lato;
+    text-align: center;
+    max-width: 100%
+}
+
+.counterTitle {
+    font-size: 1.25vw;
+    font-family: Lato
+}
+
+.settingsButton {
+    background-image: url("gear.png");
+    width: 48px;
+    height: 48px;
+    transition: 0.5s;
+}
+
+.iconAnimated {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.menu_button {
+    margin: 5px 5px 5px 5px
+}
+
+.menu_buttons {
+    bottom: 30px;
+}
+
+#menu {
+    visibility: hidden;
+    width: 50%;
+    height: 50%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 16px;
+    position: fixed;
+    z-index: 2;
+    left: 25%;
+    top: 25%;
+    opacity: 0.85;
+    font-family: Lato;
+    font-size: 2vw;
+}
+
+.background {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.3;
+    z-index: 1;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.tab-content {
+    height: 75%;
+    max-height: 75%;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: wrap;
+    overflow-y: scroll;
+    position: relative;
+}
+
+.tab-link{
+    float: left;
+    min-width: 20%;
+    margin: 5px 5px 5px 5px
+}
+
+.tab-link.active {
+    background-color: #6a6a6a
+}
+.warning.active {
+    color: #fff;
+    background-color: #600;
+    width: 100%;
+    max-width: 100%;
+}
+.warning.active .warningText {
+    font-weight: 900;
+    font-size: 1.75vw;
+    display: block;
+}
+
+.warningText {
+    display: none;
+}
+
+.shortInput {
+    max-width: 20%;
+}
+
+#chartarea {
+    max-width: 95%;
+    max-height: 23%;
+}
+
+#toast {
+    visibility: hidden;
+    min-width: 250px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 16px;
+    position: fixed;
+    z-index: 3;
+    margin-left: 125px;
+    bottom: 30px;
+    opacity: 0.85;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2vw;
+}
+
+#toast.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 0.85;}
+}
+  
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 0.85;}
+}
+  
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 0.85;}
+    to {bottom: 0; opacity: 0;}
+}
+  
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 0.85;}
+    to {bottom: 0; opacity: 0;}
+}
