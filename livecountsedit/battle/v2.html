@@ -1,47 +1,170 @@
 <html>
-<link rel=stylesheet href="https://github.hubspot.com/odometer/themes/odometer-theme-minimal.css">
-<link href='https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Roboto%20Condensed&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-<link href="/src/css/battlemode.css" rel="stylesheet" type="text/css">
+<link href="https://github.hubspot.com/odometer/themes/odometer-theme-minimal.css" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel="stylesheet" type="text/css">
+<link href="/src/css/lcedit-compare-v2.1.css" rel="stylesheet" type="text/css">
+
 <body id="body">
-    <h1 id="title"><a href="/livecountsedit/battle/v2/docs">How to use</a> | <a href="https://discord.gg/FRKWfDp">Discord</a></h1>
+    <div class="settingsButton" onclick="toggleSettings()">
+    </div>
+    <h1 class="title">Channel 1 vs. Channel 2</h1>
     <div class="container">
-        <div id="channel1">
-            <h1 id="channelName1" onclick="S(1)">PewDiePie</h1>
+        <div class="channel" id="channel1">
+            <h1 class="channelName" id="channelName1">Channel 1</h1>
             <br>
-            <div class="odometer" onclick="R(1)" id="channelSubs1">0</div>
+            <div class="odometer" id="channelSubs1">0</div>
             <br>
-            <input type="number" id="setSubs1" placeholder="Subs for channel 1">
         </div>
-        <br>
-        <div id="channel2">
-            <h1 id="channelName2" onclick="S(2)">T-Series</h1>
+        <div class="channel" id="channel2">
+            <h1 class="channelName" id="channelName2">Channel 2</h1>
             <br>
-            <div class="odometer" onclick="R(2)" id="channelSubs2">0</div>
+            <div class="odometer" id="channelSubs2">0</div>
             <br>
-            <input type="number" id="setSubs2" placeholder="Subs for channel 2">
         </div>
         <br>
     </div>
-    <div>
-        <h2 id="subGapTitle" onclick="U()">Sub Gap</h2>
-        <div class="odometer" id="subgap" onclick="T()">0</div>
+    <div class="smallCounters">
+        <div class="smallCounterContainer">
+            <div class="counter">
+                <h3 class="option counterTitle" id="ctitle1">Channel 1</h3>
+                <input class="subInput option" id="subs1" type="number" placeholder="Subs for Channel 1">
+                <input class="option" id="save1" type="submit" value="Save" onclick="u.saveCount(1)">
+            </div>
+        </div>
+        <div class="smallCounterContainer">
+            <div class="counter">
+                <h3 class="counterTitle" id="subGapTitle" onclick="">Sub Gap</h3>
+                <div class="odometer" id="subgap" onclick="">0</div>
+            </div>
+        </div>
+        <div class="smallCounterContainer">
+            <div class="counter">
+                <h3 class="option counterTitle" id="ctitle2">Channel 2</h3>
+                <input class="subInput option" id="subs2" type="number" placeholder="Subs for Channel 2">
+                <input class="option" id="save2" type="submit" value="Save" onclick="u.saveCount(2)">
+            </div>
+        </div>
     </div>
     <div id="chartarea">
         <div id="chart"></div>
     </div>
+    
+    <div class="background"></div>
+    <div id="menu" style="visibility: hidden;">
+        <div class="tab-links">
+            <button type="button" class="tab-link" onclick="openTab(event, 'Settings_General');"
+                id="defaultTab">General</button>
+            <button type="button" class="tab-link" onclick="openTab(event, 'Settings_C1');" id="c1tab">Channel
+                1</button>
+            <button type="button" class="tab-link" onclick="openTab(event, 'Settings_C2');" id="c2tab">Channel
+                2</button>
+            <button type="button" class="tab-link" onclick="openTab(event, 'Credits');">Credits</button>
+        </div><br>
+        <div>
+            <div class="tab-content" id="Settings_General">
+                <input type="checkbox" id="toggleGraph">
+                <label for="toggleGraph">Show graph</label><br>
+                <div class="warning" id="maxGraphPointsWarning">
+                    <p>Maximum <span><input type="number" class="shortInput" id="maxGraphPoints"></span> graph values</p>
+                    <p class="warningText">Maximum graph values must be at least 5</p>
+                </div>
+                <div class="warning active">
+                    <input type="checkbox" id="toggleColors">
+                    <label for="toggleColors">Colors when updating</label><br>
+                    <p class="warningText">Warning: Not recommended for epileptic users, especially in timelapses.</p>
+                </div>
+                <input type="checkbox" id="abbreviated">
+                <label for="abbreviated">Abbreviate counts</label><br><br>
+                <div class="warning active">
+                    <input type="checkbox" id="toggleKeybinds">
+                    <label for="abbreviated">Enable keybinds</label><br>
+                    <p class="warningText">Note: Keybinds are not supported on mobile, and only work when focused on the
+                        body of the webpage to prevent them from triggering when typing.</p>
+                </div>
+                <input type="checkbox" id="keepCounts">
+                <label for="keepCounts">Keep counts & settings after refresh</label><br><br>
+                <input type="checkbox" id="showCountBoxes">
+                <label for="showCountBoxes">Show the input boxes for subscriber counts</label><br>
+                <div class="warning" id="setUpdateIntervalWarning">
+                    <p>Update every <span><input type="number" class="shortInput" id="setUpdateInterval"></span> seconds
+                    </p>
+                    <p class="warningText">Update interval must be at least 0.5 seconds</p>
+                </div>
+                <p>Subscriber difference title: <span><input type="text" id="setSubGapTitle"></span></p>
+                <p>Subscriber difference method:<span>
+                        <select id="setSubGap">
+                            <option value="1">Left minus right</option>
+                            <option value="2">Right minus left</option>
+                            <option value="0">Absolute value of difference</option>
+                        </select>
+                    </span></p>
+
+            </div>
+            <div class="tab-content" id="Settings_C1">
+                <p>Channel name: <input type="text" class="channelInput" id="setChannelName1"></p>
+                <div class="warning" id="setRateWarning1">
+                    <p><span><input type="number" class="shortInput" id="minSubs1"></span> to <span><input type="number"
+                                class="shortInput" id="maxSubs1"></span> subscribers per <span><input type="number"
+                                class="shortInput" id="rate1"></span><span>
+                            <select id="unit1">
+                                <option value="1">second(s)</option>
+                                <option value="60">minute(s)</option>
+                                <option value="3600">hour(s)</option>
+                                <option value="86400">day(s)</option>
+                            </select>
+                        </span></p>
+                    <p class="warningText">Per amount of time must be greater than 0</p>
+                </div>
+                <p>Audit size (press 'a' on your keyboard to audit): <span><input type="number" class="shortInput" id="minaudit1"></span> to <span><input type="number" class="shortInput" id="maxaudit1"></span></p>
+                <p>Minimum subscriber count (leave empty for no minimum) <span><input type="number" id="mincount1"></span></p>
+                <div class="warning" id="maxSubsWarning1">
+                    <p>Maximum subscriber count (leave empty for no maximum) <span><input type="number" id="maxcount1"></span></p>
+                    <p class="warningText">Maximum must be greater than or equal to the minimum</p>
+                </div>
+            </div>
+            <div class="tab-content" id="Settings_C2">
+                <p>Channel name: <input type="text" class="channelInput" id="setChannelName2"></p>
+                <div class="warning" id="setRateWarning2">
+                    <p><span><input type="number" class="shortInput" id="minSubs2"></span> to <span><input type="number"
+                                class="shortInput" id="maxSubs2"></span> subscribers per <span><input type="number"
+                                class="shortInput" id="rate2"></span><span>
+                            <select id="unit2">
+                                <option value="1">second(s)</option>
+                                <option value="60">minute(s)</option>
+                                <option value="3600">hour(s)</option>
+                                <option value="86400">day(s)</option>
+                            </select>
+                        </span></p>
+                    <p class="warningText">Per amount of time must be greater than 0</p>
+                </div>
+                <p>Audit size (press 'l' on your keyboard to audit): <span><input type="number" class="shortInput" id="minaudit2"></span> to <span><input type="number" class="shortInput" id="maxaudit2"></span></p>
+                <p>Minimum subscriber count (leave empty for no minimum) <span><input type="number" id="mincount2"></span></p>
+                <div class="warning" id="maxSubsWarning2">
+                    <p>Maximum subscriber count (leave empty for no maximum) <span><input type="number" id="maxcount2"></span></p>
+                    <p class="warningText">Maximum must be greater than or equal to the minimum</p>
+                </div>
+            </div>
+            <div class="tab-content" id="Credits">
+                <p>Created by RandomPerson3465</p>
+                <p>Twitter: <a href="https://twitter.com/randomguy3465">@randomguy3465</a></p>
+                <p>Discord: RandomPerson244#0759 | 549471563616092171</p>
+                <br>
+                <p>Graph powered by Highcharts (<a href="https://highcharts.com">https://highcharts.com</a>)</p>
+                <br>
+                <p>Odometer powered by HubSpot odometer (<a href="https://github.com/HubSpot/odometer">https://github.com/HubSpot/odometer</a>)</p>
+                <br>
+                <p>Content tabs, and toast features from W3Schools (<a href="https://www.w3schools.com/">https://www.w3schools.com/</a>)</p>
+                <br>
+                <p>Features suggested by members of the Livecountsedit Discord (<a href="https://discord.gg/FRKWfDp">https://discord.gg/FRKWfDp</a>)</p>
+            </div>
+        </div>
+        <div class="menu_buttons"><input type="submit" class="menu_button" onclick="toggleSettings()" value="Close">
+            <input type="submit" class="menu_button" value="Apply Changes" onclick="applyChanges()">
+        </div>
+        <div id="toast"></div>
+    </div>
     <script src="https://code.highcharts.com/stock/highstock.js"></script>
     <script src="https://github.hubspot.com/odometer/odometer.js"></script>
-    <script src="/src/js/battlemode.js"></script>
-    <script>
-        
-        window.onload = () => {
-            if (Date.now() < new Date("2020-05-04T00:00:00.000Z").getTime()) {
-                document.write()
-                window.location.replace("https://randomperson3465.github.io/livecountsedit/battle")
-            }
-        }
-        
-    </script>
+    <script src="/src/js/lcedit-compare-v2.1.js"></script>
 </body>
+
 </html>
