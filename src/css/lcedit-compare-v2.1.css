@@ -87,7 +87,7 @@ input[type=checkbox] {
 }
 
 .settingsButton {
-    background-image: url("gear.png");
+    background-image: url("https://randomperson3465.github.io/img/gear.png");
     width: 48px;
     height: 48px;
     transition: 0.5s;
