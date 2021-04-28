@@ -1,3 +1,4 @@
+const navbar = document.querySelector(".navigation-bar")
 window.onload = async function() {
     const req = await fetch("https://randomperson3465.github.io/src/navbar.json")
     const json = await req.json()
