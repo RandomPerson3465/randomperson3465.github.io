@@ -1,0 +1,81 @@
+{
+    "data": [
+        {
+            "name": "Home",
+            "dropdown": false,
+            "link": "https://randomperson3465.github.io"
+        }, {
+            "name": "Pages",
+            "dropdown": true,
+            "items": [
+                {
+                    "name": "Livecountsedit",
+                    "link": "https://randomperson3465.github.io/livecountsedit"
+                },
+                {
+                    "name": "COVID-19 counters",
+                    "link": "https://randomperson3465.github.io/corona"
+                },
+                {
+                    "name": "Maybe more stuff coming soon.",
+                    "link": "https://youtu.be/dQw4w9WgXcQ"
+                }
+            ]
+        }, {
+            "name": "Livecountsedit",
+            "dropdown": true,
+            "items": [
+                {
+                    "name": "Latest version",
+                    "link": "https://randomperson3465.github.io/livecountsedit/v4"
+                }, {
+                    "name": "Compare mode",
+                    "link": "https://randomperson3465.github.io/livecountsedit/compare"
+                }, {
+                    "name": "Old compare mode",
+                    "link": "https://randomperson3465.github.io/livecountsedit/compare/old"
+                }, {
+                    "name": "Livecountsedit v3",
+                    "link": "https://randomperson3465.github.io/livecountsedit/v3"
+                },
+                {
+                    "name": "Livecountsedit v2",
+                    "link": "https://randomperson3465.github.io/livecountsedit/v2"
+                },
+                {
+                    "name": "Livecountsedit v1",
+                    "link": "https://randomperson3465.github.io/livecountsedit/v1"
+                }
+            ]
+        }, {
+            "name": "Socials",
+            "dropdown": true,
+            "items": [
+                {
+                    "name": "Twitter",
+                    "link": "https://twitter.com/randomguy3465"
+                },
+                {
+                    "name": "Livecountsedit Discord",
+                    "link": "https://randomperson3465.github.io/livecountsedit/discord"
+                }
+            ]
+        }, {
+            "name": "Random things",
+            "dropdown": true,
+            "items": [
+                {
+                    "name": "Unused Livecountsedit site",
+                    "link": "https://lcedit.github.io"
+                }, 
+                {
+                    "name": "Don't click this",
+                    "link": "https://www.youtube.com/watch?v=fC7oUOUEEi4"
+                }, {
+                    "name": "Subscribe to MrBeast here",
+                    "link": "https://www.youtube.com/channel/UCX6OQ3DkcsbYNE6H8uQQuVA?sub_confirmation=1"
+                }
+            ]
+        }
+    ]
+}
