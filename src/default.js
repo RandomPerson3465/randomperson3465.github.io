@@ -22,10 +22,10 @@ window.onload = async function() {
         }
     }
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    var d = document.getElementsByClassName("date")
-    for (i = 0; i < d.length; i++) {
-        const date = new Date(d[i].getAttribute("ts"))
-        d[i].innerText = `${date.getDate()} ${months[date.getMonth()]} ${date.getFullYear()}`
+    var dates = document.getElementsByClassName("date")
+    for (i = 0; i < dates.length; i++) {
+        const date = new Date(dates[i].getAttribute("ts"))
+        dates[i].innerText = `${date.getDate()} ${months[date.getMonth()]} ${date.getFullYear()}`
     }
     var y = document.querySelector(".year")
     if (y) y.innerText = new Date().getFullYear();
