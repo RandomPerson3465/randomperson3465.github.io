@@ -149,3 +149,8 @@ p {
     width: 55%;
     height: 88%;
 }
+
+li {
+    font-size: 3vh;
+    text-align: left;
+}
