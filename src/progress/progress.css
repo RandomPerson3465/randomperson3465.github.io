@@ -1,0 +1,40 @@
+svg {
+    margin-top: 5%;
+}
+rect {
+    fill: rgb(255, 127, 0);
+    fill-opacity: 50%;
+}
+.bar {
+    fill: rgb(255, 255, 0);
+    fill-opacity: 100%;
+}
+.content {
+    text-align: center;
+    font-size: 3vh;
+}
+.table_title {
+    text-align: left;
+    left: 5%;
+    font-size: 3.5vh;
+    font-weight: 500;
+}
+table, th, td {
+    font-size: 2.5vh;
+    border: 1px solid white;
+    border-collapse: collapse;
+}
+th, td {
+    width: 15%;
+    text-align: left;
+    padding: 5px;
+}
+tr:nth-child(even) {
+    background-color: #005;
+}
+tr:nth-child(odd) {
+    background-color: #446;
+}
+span {
+    font-weight: 600;
+}
