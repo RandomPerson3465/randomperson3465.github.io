@@ -1,0 +1,114 @@
+/* 
+    Default colors
+    Background color: #1a1a20
+    Font color: #ffffff (white)
+    Link color: #4babdb
+*/
+
+body {
+    background-color: #1a1a20;
+    color: #fff;
+    font-family: Lato, Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+.title {
+    text-align: center;
+    font-size: 6vh;
+    animation: titleEffect 0.75s
+}
+.content {
+    align-self: center;
+    overflow-y: scroll;
+    height: 95%;
+    width: 100%;
+}
+.container {
+    margin: auto;
+}
+.footer {
+    text-align: left;
+    margin: 5px 5px 5px 5px;
+    font-size: 2vh;
+    bottom: 0px;
+    position: absolute;
+}
+
+li {
+    font-size: 3vh;
+    text-align: left;
+}
+
+a {
+    color: #4babdb;
+}
+
+h2 {
+    font-size: 4vh;
+    text-align: left;
+}
+
+p {
+    font-size: 3vh;
+    text-align: left;
+}
+
+/* Navigation bar CSS */
+
+.navigation-bar {
+    overflow: hidden;
+    background-color: #252525;
+}
+
+.navigation-bar a {
+    float: left;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    text-align: center;
+    overflow: hidden;
+}
+
+.dropdown-button {
+    font-size: 20px;
+    color: #fff;
+    border: none;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navigation-bar a:hover, .dropdown:hover .dropdown-button {
+    background-color: #25257f;
+    transition: colorTransition 0.5s
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #444;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content a{
+    float: none;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #222;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
