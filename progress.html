@@ -1,11 +1,12 @@
 <html>
 
 <head>
-    <title>RandomPerson3465</title>
+    <title>100 Years Progress Bar</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext" type="text/css">
-    <link rel="stylesheet" href="/src/default.css" type="text/css">
-    <link rel="stylesheet" href="/src/progress.css" type="text/css">
-    <link rel="icon" href="/img/progressbar.png">
+    <link rel="stylesheet" href="./src/default/default.css" type="text/css">
+    <link rel="stylesheet" href="./src/default/return_button.css" type="text/css">
+    <link rel="stylesheet" href="./src/progress/progress.css" type="text/css">
+    <link rel="icon" href="./img/progressbar.png">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="RandomPerson3465.github.io">
     <meta property="og:url" content="https://randomperson3465.github.io">
@@ -16,12 +17,10 @@
 </head>
 
 <body>
-    <h1 class="title">RandomPerson3465</h1>
-    <noscript>Enable Javascript please!</noscript>
-    <div class="navigation-bar">
-    </div>
+    <noscript>This page requires JavaScript to work properly.</noscript>
+    <div class="return_button"><a href="https://randomperson3465.github.io"><button class="dark_return_button">&lt;&lt; Return to Main Page</button></a></div>
     <div class="content">
-        <svg width="100%" height="100">
+        <svg width="98%" height="100">
             <rect width="100%" height="100"/>
             <rect class="bar" width="0%" height="100"/>
         </svg>
@@ -29,12 +28,22 @@
         <div>Started <span id="started">Loading...</span> ago</div>
         <div><span id="timeLeft">Loading...</span> left</div>
         <div><span id="progress">Loading...</span>% complete - <a href="https://strawpoll.com/59zh5hhf">Do you think you will be alive when this progress bar ends? Vote here.</a></div>
+
+        <h2 class="table_title">Table of Milestones</h2>
+        <table>
+            <tr>
+                <th style="width: 8%">Percent</th>
+                <th style="width: 25%">Local Time</th>
+            </tr>
+        </table>
     </div>
     <div class="footer">
-        <h6>© RandomPerson3465 2019-<span class="year">2021</span> - <a href="/faq">Website FAQ</a> - This website was last updated on <span
-                class="date" ts="2021-08-30T01:00:00Z">30 August 2021</span>.</h6>
+        <h6>© RandomPerson3465 <span class="year">2022</span> - This page was last updated on <span
+                class="date" ts="2022-08-09T22:15:00Z">9 August 2022</span>.</h6>
     </div>
-    <script type="text/javascript" src="/src/default.js"></script>
-    <script type="text/javascript" src="/src/progress.js"></script>
+    <script type="text/javascript" src="./src/default/main_page.js"></script>
+    <script type="text/javascript" src="./src/progress/duration.js"></script>
+    <script type="text/javascript" src="./src/progress/progress.js"></script>
 </body>
+    
 </html>
