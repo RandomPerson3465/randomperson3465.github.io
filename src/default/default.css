@@ -5,6 +5,25 @@
     Link color: #4babdb
 */
 
+@keyframes titleEffect {
+    from {
+        opacity: 0.5; 
+        font-size: 3.5vw;
+    }
+    to {
+        opacity: 1; 
+        font-size: 4vw
+    }
+}
+
+@keyframes colorTransition {
+    from {
+        background-color: #252525
+    }
+    to {
+        background-color: #25257f
+    }
+}
 body {
     background-color: #1a1a20;
     color: #fff;
@@ -13,46 +32,39 @@ body {
 }
 .title {
     text-align: center;
-    font-size: 6vh;
+    font-size: 4vw;
     animation: titleEffect 0.75s
-}
-.content {
-    align-self: center;
-    overflow-y: scroll;
-    height: 95%;
-    width: 100%;
 }
 .container {
     margin: auto;
 }
-.footer {
-    text-align: left;
-    margin: 5px 5px 5px 5px;
-    font-size: 2vh;
-    bottom: 0px;
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: auto;
+    width: 90%;
+    height: 30%;
+}
+.item {
+    width: 50%;
+    height: 80%;
+    margin: 4% 4% 4% 4%;
+    background-color: #333
+}
+
+.icon {
+    height: 20vh;
+    width: 20vh;
+    float: left;
+    padding-left: 2vh;
+}
+
+.icon-container {
+    display: block;
     position: absolute;
+    transform: translateY(8%);
 }
-
-li {
-    font-size: 3vh;
-    text-align: left;
-}
-
-a {
-    color: #4babdb;
-}
-
-h2 {
-    font-size: 4vh;
-    text-align: left;
-}
-
-p {
-    font-size: 3vh;
-    text-align: left;
-}
-
-/* Navigation bar CSS */
 
 .navigation-bar {
     overflow: hidden;
@@ -111,4 +123,45 @@ p {
 
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+.footer {
+    text-align: left;
+    margin: 5px 5px 5px 5px;
+    font-size: 2vh;
+    bottom: 0px;
+    position: absolute;
+}
+
+.item-content {
+    float: left;
+    padding: 0vh 24vh;
+    width: max-content;
+    overflow: hidden;
+}
+
+h2 {
+    font-size: 4vh;
+    text-align: left;
+}
+
+p {
+    font-size: 3vh;
+    text-align: left;
+}
+
+.item:hover {
+    background-color: #1a1a20;
+    border: 2px solid #fff;
+    width: 55%;
+    height: 88%;
+}
+
+li {
+    font-size: 3vh;
+    text-align: left;
+}
+
+a {
+    color: #4babdb;
 }
