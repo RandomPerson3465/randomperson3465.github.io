@@ -1,0 +1,140 @@
+body {
+    font-family: Arial;
+    background-color: #dddddd;
+}
+
+a {
+    color: #4babdb;
+}
+
+a:visited {
+    color: #ab4bdb;
+}
+
+.title {
+    text-align: center;
+    font-family: Lato;
+    margin-top: 0;
+}
+
+h1.title {
+    font-size: 5em;
+}
+
+h2.title {
+    font-size: 3em;
+}
+
+.card-row {
+    display: flex;
+    justify-content:space-around;
+    margin-top: 0.5vw;
+    margin-bottom: 0.5vw;
+}
+
+.top-icons {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.top-icons i {
+    cursor: pointer;
+}
+
+.card-row a, .top-icons a, .sidebar-menu a, .footer-stuff a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.card {
+    height: 8vw;
+    width: 45vw;
+    padding: 0.5vw;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.card:active {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    background-color: #cccccc;
+}
+
+.card img {
+    float: left;
+    height: 8vw;
+    width: 8vw;
+}
+
+.card .card-title {
+    margin-left: 9vw;
+    font-size: 2.5vw;
+}
+
+.card .card-description {
+    margin-left: 9vw;
+    font-size: 1.5vw;
+}
+
+.top-icons {
+    text-align: right;
+    font-size: 5vh;
+}
+
+.sidebar-menu {
+    position: fixed;
+    float: right;
+    height: 100%;
+    width: 0;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    overflow-x: hidden;
+    transition: 0.5s;
+    background-color: rgba(221, 221, 221, 0.95);
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.sidebar-menu .sidebar-content {
+    font-size: 5vh;
+    text-align: center;
+}
+
+.sidebar-menu .sidebar-content div {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.sidebar-close {
+    text-align: right;
+    font-size: 5vh;
+    margin-top: 10px;
+    margin-right: 10px;
+    color: red;
+}
+
+.footer-stuff {
+    text-align: center;
+}
+
+.main-content {
+    font-size: 3vh;
+    padding: 8px;
+    font-family: Lato;
+}
+
+input {
+    height: 4vh;
+    font-size: 3vh;
+    font-family: Lato;
+    border-radius: 5px;
+    border: 1px solid gray;
+}

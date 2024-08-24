@@ -1,40 +1,22 @@
-svg {
-    margin-top: 5%;
+.main-content {
+    text-align: center;
 }
-rect {
-    fill: rgb(255, 127, 0);
+
+#progress-container {
+    height: 100px;
+}
+
+#progress-bar-background {
+    height: 100px;
+    fill: #ff7f00;
     fill-opacity: 50%;
 }
-.bar {
-    fill: rgb(255, 255, 0);
-    fill-opacity: 100%;
+
+#progress-bar {
+    height: 100px;
+    fill: yellow;
 }
-.content {
-    text-align: center;
-    font-size: 3vh;
-}
-.table_title {
-    text-align: left;
-    left: 5%;
-    font-size: 3.5vh;
-    font-weight: 500;
-}
-table, th, td {
-    font-size: 2.5vh;
-    border: 1px solid white;
-    border-collapse: collapse;
-}
-th, td {
-    width: 15%;
-    text-align: left;
-    padding: 5px;
-}
-tr:nth-child(even) {
-    background-color: #005;
-}
-tr:nth-child(odd) {
-    background-color: #446;
-}
-span {
-    font-weight: 600;
+
+#progress-milestone {
+    width: 10vw;
 }
