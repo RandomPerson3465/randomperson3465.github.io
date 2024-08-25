@@ -40,6 +40,28 @@
             <li><a href="/livecountsedit/secrets/main.html">Livecountsedit Beta 1</a></li>
         </div>
         <p class="footer-stuff">Site updated August 24, 2024</p>
+
+        <div id="disqus_thread"></div>
+        <script>
+            
+            var disqus_config = function () {
+            this.page.url = "https://randomperson3465.github.io/livecountsedit";
+            this.page.identifier = "https://randomperson3465.github.io/livecountsedit";
+            };
+            
+            (function() { 
+            var d = document, s = d.createElement('script');
+            s.src = 'https://randomperson3465.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+            })();
+
+            document.addEventListener('themeChanged', function (e) { 
+                DISQUS.reset({ reload: true, config: disqus_config });
+            });
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
     </body>
     <script src="./src/main.js"></script>
 </html>

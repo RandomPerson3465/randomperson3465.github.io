@@ -23,12 +23,18 @@ document.querySelector(".sidebar-menu").innerHTML = `<div class="sidebar-close">
 function setDarkTheme() {
     document.querySelector(".document-theme-css").href = "/src/dark.css";
     document.querySelector(".document-theme-changer").innerHTML = '<i class="far fa-sun" onclick="setLightTheme();"></i>';
+    document.body.style.backgroundColor = "#222222"; // Prevent Disqus desync
+    const event = new Event('themeChanged');
+    document.dispatchEvent(event);
     localStorage.setItem("documentTheme", "1");
 }
 
 function setLightTheme() {
     document.querySelector(".document-theme-css").href = "/src/main.css";
     document.querySelector(".document-theme-changer").innerHTML = '<i class="far fa-moon" onclick="setDarkTheme();"></i>';
+    document.body.style.backgroundColor = "#dddddd"; // Prevent Disqus desync
+    const event = new Event('themeChanged');
+    document.dispatchEvent(event);
     localStorage.setItem("documentTheme", "0");
 }
 
