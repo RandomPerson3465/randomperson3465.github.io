@@ -1,0 +1,11 @@
+form {
+    text-align: left;
+}
+
+input[type=checkbox] {
+    width: 3vh;
+}
+
+#barTitle {
+    width: 40vw;
+}

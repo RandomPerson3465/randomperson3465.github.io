@@ -139,3 +139,9 @@ input {
     border-radius: 5px;
     border: 1px solid gray;
 }
+
+button {
+    font-family: Lato;
+    font-size: 3vh;
+    border-radius: 5px;
+}

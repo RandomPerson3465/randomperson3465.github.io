@@ -1,13 +1,13 @@
 <html>
     <head>
-        <title>100 Years Progress Bar</title>
+        <title>My Progress Bar</title>
         <meta property="og:type" content="website">
         <meta property="og:site_name" content="RandomPerson3465.github.io">
-        <meta property="og:url" content="https://randomperson3465.github.io">
-        <meta property="og:description" content="RandomPerson3465's website">
+        <meta property="og:url" content="https://randomperson3465.github.io/progress/create.html">
+        <meta property="og:description" content="RandomPerson3465's website - Progress Bar Maker">
         <meta name="twitter:site" content="RandomPerson3465.github.io">
-        <meta name="twitter:description" content="RandomPerson3465's website">
-        <meta name="twitter:url" content="https://randomperson3465.github.io">
+        <meta name="twitter:description" content="RandomPerson3465's website - Progress Bar Maker">
+        <meta name="twitter:url" content="https://randomperson3465.github.io/progress/create.html">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext" type="text/css">
         <link class="document-theme-css" rel="stylesheet" href="/src/main.css">
@@ -17,7 +17,7 @@
     <body>
         <div class="sidebar-menu"></div>
         <div class="top-icons"></div>
-        <h2 class="title">100 Years Progress Bar</h1>
+        <h2 class="title">My Progress Bar</h1>
         <hr>
         <div class="main-content">
             <svg id="progress-container" width="98%">
@@ -25,17 +25,13 @@
                 <rect id="progress-bar" width="0%"/>
             </svg>
             <p><strong><span id="progress-bar-progress">Loading...</span></strong>% complete • <span id="progress-time-left">Loading...</span> left</p>
-            <p>Start date and time: <strong><span id="progress-start-time">Loading...</span></strong></p>
-            <p>End date and time: <strong><span id="progress-end-time">Loading...</span></strong></p>
-            <p>Do you think you will be alive when this progress bar ends? <a href="https://strawpoll.com/59zh5hhf">Vote here.</a></p>
-            <a href="/progress/create.html">Create your own custom progress bar! (BETA)</a>
-            <div>
-                <h3>Milestone Calculator</h3>
-                <p>Input a milestone: <input id="progress-milestone" type="number" step="any" min="0" max="100" value="6">%</p>
-                <p>Date and time that the progress bar <span id="progress-tense">will reach</span> that milestone: <strong><span id="progress-milestone-date">Loading...</span></strong></p>
-            </div>
+            <button onclick="navigator.clipboard.writeText(window.location.href); alert('Copied URL to clipboard')">Share this progress bar!</button><br><br>
+            <a href="./create.html">Create your own custom progress bar!</a><br><br>
+            <a href="../">Back to 100 Years Progress Bar</a>
         </div>
-        <p class="footer-stuff">Site updated August 24, 2024</p>
+
+
+        <p class="footer-stuff">Site updated September 3, 2024 - Note: Title was specified by a user of this site. Disqus comments are shared between all progress bars</p>
 
         <div id="disqus_thread"></div>
         <script>
@@ -59,6 +55,6 @@
         <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
     </body>
-    <script src="./src/main.js"></script>
-    <script src="./src/progress/progress.js"></script>
+    <script src="/src/main.js"></script>
+    <script src="/src/progress/progressbar.js"></script>
 </html>

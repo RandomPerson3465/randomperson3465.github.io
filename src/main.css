@@ -131,10 +131,16 @@ h2.title {
     font-family: Lato;
 }
 
-input {
+input, select {
     height: 4vh;
     font-size: 3vh;
     font-family: Lato;
     border-radius: 5px;
     border: 1px solid gray;
+}
+
+button {
+    font-family: Lato;
+    font-size: 3vh;
+    border-radius: 5px;
 }
