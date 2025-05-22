@@ -60,10 +60,7 @@ if (document.querySelector("h1.title") && Math.random() < 1/3465) {
     document.querySelector("h1.title").innerText = "RandomPerson3456";
 }
 
-
-// https://stackoverflow.com/a/63260070
-// Removes shitty ads
-document.addEventListener('DOMContentLoaded', function () {
+function removeAds() {
     let disqus = document.getElementById('disqus_thread');
 
     if (disqus) {
@@ -86,4 +83,8 @@ document.addEventListener('DOMContentLoaded', function () {
             clearInterval(remove_ads);
         }, 5000);
     }
-});
+}
+// https://stackoverflow.com/a/63260070
+// Removes shitty ads
+document.addEventListener('DOMContentLoaded', removeAds);
+document.addEventListener('themeChanged', removeAds);
