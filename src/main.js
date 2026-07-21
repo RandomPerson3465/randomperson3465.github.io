@@ -9,6 +9,7 @@ document.querySelector(".sidebar-menu").innerHTML = `<div class="sidebar-close">
     <hr>
     <div><a href="/livecountsedit.html">Livecountsedit</a></div>
     <div><a href="/progress.html">Progress Bar</a></div>
+    <div><a href="/animated-map-art/">Animated Map Art</a></div>
     <div><a href="/rick_astley_mod.html">Rick Astley Mod</a></div>
     <hr>
     <div><a href="/roll.html">Don't Click This</a></div>
@@ -39,7 +40,7 @@ function setLightTheme() {
 }
 
 function openSidebar() {
-    document.querySelector(".sidebar-menu").style.width = "20vw";
+    document.querySelector(".sidebar-menu").style.width = "auto";
 }
 
 function closeSidebar() {
